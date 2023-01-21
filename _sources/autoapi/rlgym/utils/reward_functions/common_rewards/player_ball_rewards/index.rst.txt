@@ -27,7 +27,7 @@ Classes
    Helper class that provides a standard way to create an ABC using
    inheritance.
 
-   .. py:method:: reset(initial_state)
+   .. py:method:: reset(initial_state: rlgym.utils.gamestates.GameState)
 
       Function to be called each time the environment is reset. This is meant to enable users to design stateful reward
       functions that maintain information about the game throughout an episode to determine a reward.
@@ -35,7 +35,7 @@ Classes
       :param initial_state: The initial state of the reset environment.
 
 
-   .. py:method:: get_reward(player, state, previous_action)
+   .. py:method:: get_reward(player: rlgym.utils.gamestates.PlayerData, state: rlgym.utils.gamestates.GameState, previous_action: numpy.ndarray) -> float
 
       Function to compute the reward for a player. This function is given a player argument, and it is expected that
       the reward returned by this function will be for that player.
@@ -55,7 +55,7 @@ Classes
    Helper class that provides a standard way to create an ABC using
    inheritance.
 
-   .. py:method:: reset(initial_state)
+   .. py:method:: reset(initial_state: rlgym.utils.gamestates.GameState)
 
       Function to be called each time the environment is reset. This is meant to enable users to design stateful reward
       functions that maintain information about the game throughout an episode to determine a reward.
@@ -63,7 +63,7 @@ Classes
       :param initial_state: The initial state of the reset environment.
 
 
-   .. py:method:: get_reward(player, state, previous_action)
+   .. py:method:: get_reward(player: rlgym.utils.gamestates.PlayerData, state: rlgym.utils.gamestates.GameState, previous_action: numpy.ndarray) -> float
 
       Function to compute the reward for a player. This function is given a player argument, and it is expected that
       the reward returned by this function will be for that player.
@@ -83,7 +83,7 @@ Classes
    Helper class that provides a standard way to create an ABC using
    inheritance.
 
-   .. py:method:: reset(initial_state)
+   .. py:method:: reset(initial_state: rlgym.utils.gamestates.GameState)
 
       Function to be called each time the environment is reset. This is meant to enable users to design stateful reward
       functions that maintain information about the game throughout an episode to determine a reward.
@@ -91,7 +91,7 @@ Classes
       :param initial_state: The initial state of the reset environment.
 
 
-   .. py:method:: get_reward(player, state, previous_action)
+   .. py:method:: get_reward(player: rlgym.utils.gamestates.PlayerData, state: rlgym.utils.gamestates.GameState, previous_action: numpy.ndarray) -> float
 
       Function to compute the reward for a player. This function is given a player argument, and it is expected that
       the reward returned by this function will be for that player.
@@ -111,7 +111,7 @@ Classes
    Helper class that provides a standard way to create an ABC using
    inheritance.
 
-   .. py:method:: reset(initial_state)
+   .. py:method:: reset(initial_state: rlgym.utils.gamestates.GameState)
 
       Function to be called each time the environment is reset. This is meant to enable users to design stateful reward
       functions that maintain information about the game throughout an episode to determine a reward.
@@ -119,7 +119,7 @@ Classes
       :param initial_state: The initial state of the reset environment.
 
 
-   .. py:method:: get_reward(player, state, previous_action)
+   .. py:method:: get_reward(player: rlgym.utils.gamestates.PlayerData, state: rlgym.utils.gamestates.GameState, previous_action: numpy.ndarray) -> float
 
       Function to compute the reward for a player. This function is given a player argument, and it is expected that
       the reward returned by this function will be for that player.

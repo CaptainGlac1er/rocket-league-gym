@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>rlgym.utils.state_setters &mdash; RLGym 2.0.1 documentation</title>
+  <title>rlgym.utils.state_setters &mdash; RLGym  documentation</title>
       <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
@@ -140,20 +140,17 @@
 inheritance.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="rlgym.utils.state_setters.StateSetter.build_wrapper">
-<span class="sig-name descname"><span class="pre">build_wrapper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_team_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spawn_opponents</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.StateSetter.build_wrapper" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">build_wrapper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_team_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spawn_opponents</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="wrappers/state_wrapper/index.html#rlgym.utils.state_setters.wrappers.state_wrapper.StateWrapper" title="rlgym.utils.state_setters.wrappers.state_wrapper.StateWrapper"><span class="pre">rlgym.utils.state_setters.wrappers.state_wrapper.StateWrapper</span></a></span></span><a class="headerlink" href="#rlgym.utils.state_setters.StateSetter.build_wrapper" title="Permalink to this definition"></a></dt>
 <dd><p>Function to be called each time the environment is reset.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>max_team_size</strong> (<em>int</em>) – The maximum supported team size in the current rlgym instance.</p></li>
-<li><p><strong>spawn_opponents</strong> (<em>bool</em>) – If the user expects agents in the orange side or not, only provided for backwards compatibility.</p></li>
+<li><p><strong>max_team_size</strong> – The maximum supported team size in the current rlgym instance.</p></li>
+<li><p><strong>spawn_opponents</strong> – If the user expects agents in the orange side or not, only provided for backwards compatibility.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The StateWrapper object that will be received in StateSetter.reset(), any team shapes are supported as</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="wrappers/state_wrapper/index.html#rlgym.utils.state_setters.wrappers.state_wrapper.StateWrapper" title="rlgym.utils.state_setters.wrappers.state_wrapper.StateWrapper">rlgym.utils.state_setters.wrappers.state_wrapper.StateWrapper</a></p>
 </dd>
 </dl>
 <p>long as team size is smaller or equal to max_team_size</p>
@@ -161,11 +158,11 @@ inheritance.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rlgym.utils.state_setters.StateSetter.reset">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_wrapper</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.StateSetter.reset" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_wrapper</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="wrappers/state_wrapper/index.html#rlgym.utils.state_setters.wrappers.state_wrapper.StateWrapper" title="rlgym.utils.state_setters.wrappers.state_wrapper.StateWrapper"><span class="pre">rlgym.utils.state_setters.wrappers.state_wrapper.StateWrapper</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.StateSetter.reset" title="Permalink to this definition"></a></dt>
 <dd><p>Function to be called each time the environment is reset.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>state_wrapper</strong> (<a class="reference internal" href="wrappers/state_wrapper/index.html#rlgym.utils.state_setters.wrappers.state_wrapper.StateWrapper" title="rlgym.utils.state_setters.wrappers.state_wrapper.StateWrapper"><em>rlgym.utils.state_setters.wrappers.state_wrapper.StateWrapper</em></a>) – StateWrapper object to be modified with desired state values.</p>
+<dd class="field-odd"><p><strong>state_wrapper</strong> – StateWrapper object to be modified with desired state values.</p>
 </dd>
 </dl>
 <p>NOTE: This function should change any desired values of the StateWrapper, which are all defaulted to 0.
@@ -202,11 +199,11 @@ inheritance.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rlgym.utils.state_setters.DefaultState.reset">
-<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_wrapper</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.DefaultState.reset" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_wrapper</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rlgym.utils.state_setters.StateWrapper</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.DefaultState.reset" title="Permalink to this definition"></a></dt>
 <dd><p>Modifies state_wrapper values to emulate a randomly selected default kickoff.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>state_wrapper</strong> (<em>rlgym.utils.state_setters.StateWrapper</em>) – StateWrapper object to be modified with desired state values.</p>
+<dd class="field-odd"><p><strong>state_wrapper</strong> – StateWrapper object to be modified with desired state values.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -215,39 +212,30 @@ inheritance.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="rlgym.utils.state_setters.RandomState">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rlgym.utils.state_setters.</span></span><span class="sig-name descname"><span class="pre">RandomState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ball_rand_speed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cars_rand_speed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cars_on_ground</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.RandomState" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rlgym.utils.state_setters.</span></span><span class="sig-name descname"><span class="pre">RandomState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ball_rand_speed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cars_rand_speed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cars_on_ground</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.RandomState" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#rlgym.utils.state_setters.StateSetter" title="rlgym.utils.state_setters.StateSetter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rlgym.utils.state_setters.StateSetter</span></code></a></p>
 <p>Helper class that provides a standard way to create an ABC using
 inheritance.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>ball_rand_speed</strong> (<em>bool</em>) – </p></li>
-<li><p><strong>cars_rand_speed</strong> (<em>bool</em>) – </p></li>
-<li><p><strong>cars_on_ground</strong> (<em>bool</em>) – </p></li>
-</ul>
-</dd>
-</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="rlgym.utils.state_setters.RandomState.reset">
-<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_wrapper</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.RandomState.reset" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_wrapper</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rlgym.utils.state_setters.StateWrapper</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.RandomState.reset" title="Permalink to this definition"></a></dt>
 <dd><p>Modifies the StateWrapper to contain random values the ball and each car.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>state_wrapper</strong> (<em>rlgym.utils.state_setters.StateWrapper</em>) – StateWrapper object to be modified with desired state values.</p>
+<dd class="field-odd"><p><strong>state_wrapper</strong> – StateWrapper object to be modified with desired state values.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rlgym.utils.state_setters.RandomState._reset_ball_random">
-<span class="sig-name descname"><span class="pre">_reset_ball_random</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_wrapper</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_speed</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.RandomState._reset_ball_random" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">_reset_ball_random</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_wrapper</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rlgym.utils.state_setters.StateWrapper</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_speed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.RandomState._reset_ball_random" title="Permalink to this definition"></a></dt>
 <dd><p>Function to set the ball to a random position.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>state_wrapper</strong> (<em>rlgym.utils.state_setters.StateWrapper</em>) – StateWrapper object to be modified.</p></li>
-<li><p><strong>random_speed</strong> (<em>bool</em>) – Boolean indicating whether to randomize velocity values.</p></li>
+<li><p><strong>state_wrapper</strong> – StateWrapper object to be modified.</p></li>
+<li><p><strong>random_speed</strong> – Boolean indicating whether to randomize velocity values.</p></li>
 </ul>
 </dd>
 </dl>
@@ -255,14 +243,14 @@ inheritance.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rlgym.utils.state_setters.RandomState._reset_cars_random">
-<span class="sig-name descname"><span class="pre">_reset_cars_random</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_wrapper</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">on_ground</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_speed</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.RandomState._reset_cars_random" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">_reset_cars_random</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_wrapper</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rlgym.utils.state_setters.StateWrapper</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">on_ground</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_speed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.RandomState._reset_cars_random" title="Permalink to this definition"></a></dt>
 <dd><p>Function to set all cars to a random position.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>state_wrapper</strong> (<em>rlgym.utils.state_setters.StateWrapper</em>) – StateWrapper object to be modified.</p></li>
-<li><p><strong>on_ground</strong> (<em>bool</em>) – Boolean indicating whether to place cars only on the ground.</p></li>
-<li><p><strong>random_speed</strong> (<em>bool</em>) – Boolean indicating whether to randomize velocity values.</p></li>
+<li><p><strong>state_wrapper</strong> – StateWrapper object to be modified.</p></li>
+<li><p><strong>on_ground</strong> – Boolean indicating whether to place cars only on the ground.</p></li>
+<li><p><strong>random_speed</strong> – Boolean indicating whether to randomize velocity values.</p></li>
 </ul>
 </dd>
 </dl>

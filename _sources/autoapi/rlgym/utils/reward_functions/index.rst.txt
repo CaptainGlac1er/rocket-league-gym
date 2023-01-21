@@ -46,7 +46,7 @@ Classes
    Helper class that provides a standard way to create an ABC using
    inheritance.
 
-   .. py:method:: reset(initial_state)
+   .. py:method:: reset(initial_state: rlgym.utils.gamestates.GameState)
       :abstractmethod:
 
       Function to be called each time the environment is reset. This is meant to enable users to design stateful reward
@@ -55,7 +55,7 @@ Classes
       :param initial_state: The initial state of the reset environment.
 
 
-   .. py:method:: pre_step(state)
+   .. py:method:: pre_step(state: rlgym.utils.gamestates.GameState)
 
       Function to pre-compute values each step. This function is called only once each step, before get_reward is
       called for each player.
@@ -63,7 +63,7 @@ Classes
       :param state: The current state of the game.
 
 
-   .. py:method:: get_reward(player, state, previous_action)
+   .. py:method:: get_reward(player: rlgym.utils.gamestates.PlayerData, state: rlgym.utils.gamestates.GameState, previous_action: numpy.ndarray) -> float
       :abstractmethod:
 
       Function to compute the reward for a player. This function is given a player argument, and it is expected that
@@ -76,7 +76,7 @@ Classes
       :return: A reward for the player provided.
 
 
-   .. py:method:: get_final_reward(player, state, previous_action)
+   .. py:method:: get_final_reward(player: rlgym.utils.gamestates.PlayerData, state: rlgym.utils.gamestates.GameState, previous_action: numpy.ndarray) -> float
 
       Function to compute the reward for a player at the final step of an episode. This will be called only once, when
       it is determined that the current state is a terminal one. This may be useful for sparse reward signals that only
@@ -97,7 +97,7 @@ Classes
    Helper class that provides a standard way to create an ABC using
    inheritance.
 
-   .. py:method:: reset(initial_state)
+   .. py:method:: reset(initial_state: rlgym.utils.gamestates.GameState)
 
       Function to be called each time the environment is reset. This is meant to enable users to design stateful reward
       functions that maintain information about the game throughout an episode to determine a reward.
@@ -105,7 +105,7 @@ Classes
       :param initial_state: The initial state of the reset environment.
 
 
-   .. py:method:: get_reward(player, state, previous_action)
+   .. py:method:: get_reward(player: rlgym.utils.gamestates.PlayerData, state: rlgym.utils.gamestates.GameState, previous_action: numpy.ndarray) -> float
 
       Function to compute the reward for a player. This function is given a player argument, and it is expected that
       the reward returned by this function will be for that player.
@@ -117,7 +117,7 @@ Classes
       :return: A reward for the player provided.
 
 
-   .. py:method:: get_final_reward(player, state, previous_action)
+   .. py:method:: get_final_reward(player: rlgym.utils.gamestates.PlayerData, state: rlgym.utils.gamestates.GameState, previous_action: numpy.ndarray) -> float
 
       Function to compute the reward for a player at the final step of an episode. This will be called only once, when
       it is determined that the current state is a terminal one. This may be useful for sparse reward signals that only
@@ -131,13 +131,13 @@ Classes
 
 
 
-.. py:class:: CombinedReward(reward_functions, reward_weights = None)
+.. py:class:: CombinedReward(reward_functions: Tuple[rlgym.utils.reward_functions.RewardFunction, Ellipsis], reward_weights: Optional[Tuple[float, Ellipsis]] = None)
 
    Bases: :py:obj:`rlgym.utils.reward_functions.RewardFunction`
 
    A reward composed of multiple rewards.
 
-   .. py:method:: from_zipped(*rewards_and_weights)
+   .. py:method:: from_zipped(*rewards_and_weights: Union[rlgym.utils.reward_functions.RewardFunction, Tuple[rlgym.utils.reward_functions.RewardFunction, float]]) -> CombinedReward
       :classmethod:
 
       Alternate constructor which takes any number of either rewards, or (reward, weight) tuples.
@@ -145,14 +145,14 @@ Classes
       :param rewards_and_weights: a sequence of RewardFunction or (RewardFunction, weight) tuples
 
 
-   .. py:method:: reset(initial_state)
+   .. py:method:: reset(initial_state: rlgym.utils.gamestates.GameState) -> None
 
       Resets underlying reward functions.
 
       :param initial_state: The initial state of the reset environment.
 
 
-   .. py:method:: get_reward(player, state, previous_action)
+   .. py:method:: get_reward(player: rlgym.utils.gamestates.PlayerData, state: rlgym.utils.gamestates.GameState, previous_action: numpy.ndarray) -> float
 
       Returns the reward for a player on the terminal state.
 
@@ -163,7 +163,7 @@ Classes
       :return: The combined rewards for the player on the state.
 
 
-   .. py:method:: get_final_reward(player, state, previous_action)
+   .. py:method:: get_final_reward(player: rlgym.utils.gamestates.PlayerData, state: rlgym.utils.gamestates.GameState, previous_action: numpy.ndarray) -> float
 
       Returns the reward for a player on the terminal state.
 

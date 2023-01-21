@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>rlgym.utils.reward_functions.common_rewards.ball_goal_rewards &mdash; RLGym 2.0.1 documentation</title>
+  <title>rlgym.utils.reward_functions.common_rewards.ball_goal_rewards &mdash; RLGym  documentation</title>
       <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
@@ -118,34 +118,31 @@
 inheritance.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="rlgym.utils.reward_functions.common_rewards.ball_goal_rewards.LiuDistanceBallToGoalReward.reset">
-<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initial_state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.reward_functions.common_rewards.ball_goal_rewards.LiuDistanceBallToGoalReward.reset" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initial_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../../gamestates/index.html#rlgym.utils.gamestates.GameState" title="rlgym.utils.gamestates.GameState"><span class="pre">rlgym.utils.gamestates.GameState</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.reward_functions.common_rewards.ball_goal_rewards.LiuDistanceBallToGoalReward.reset" title="Permalink to this definition"></a></dt>
 <dd><p>Function to be called each time the environment is reset. This is meant to enable users to design stateful reward
 functions that maintain information about the game throughout an episode to determine a reward.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>initial_state</strong> (<a class="reference internal" href="../../../gamestates/index.html#rlgym.utils.gamestates.GameState" title="rlgym.utils.gamestates.GameState"><em>rlgym.utils.gamestates.GameState</em></a>) – The initial state of the reset environment.</p>
+<dd class="field-odd"><p><strong>initial_state</strong> – The initial state of the reset environment.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rlgym.utils.reward_functions.common_rewards.ball_goal_rewards.LiuDistanceBallToGoalReward.get_reward">
-<span class="sig-name descname"><span class="pre">get_reward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">player</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">previous_action</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.reward_functions.common_rewards.ball_goal_rewards.LiuDistanceBallToGoalReward.get_reward" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_reward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">player</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../../gamestates/index.html#rlgym.utils.gamestates.PlayerData" title="rlgym.utils.gamestates.PlayerData"><span class="pre">rlgym.utils.gamestates.PlayerData</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../../gamestates/index.html#rlgym.utils.gamestates.GameState" title="rlgym.utils.gamestates.GameState"><span class="pre">rlgym.utils.gamestates.GameState</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">previous_action</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#rlgym.utils.reward_functions.common_rewards.ball_goal_rewards.LiuDistanceBallToGoalReward.get_reward" title="Permalink to this definition"></a></dt>
 <dd><p>Function to compute the reward for a player. This function is given a player argument, and it is expected that
 the reward returned by this function will be for that player.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>player</strong> (<a class="reference internal" href="../../../gamestates/index.html#rlgym.utils.gamestates.PlayerData" title="rlgym.utils.gamestates.PlayerData"><em>rlgym.utils.gamestates.PlayerData</em></a>) – Player to compute the reward for.</p></li>
-<li><p><strong>state</strong> (<a class="reference internal" href="../../../gamestates/index.html#rlgym.utils.gamestates.GameState" title="rlgym.utils.gamestates.GameState"><em>rlgym.utils.gamestates.GameState</em></a>) – The current state of the game.</p></li>
-<li><p><strong>previous_action</strong> (<em>numpy.ndarray</em>) – The action taken at the previous environment step.</p></li>
+<li><p><strong>player</strong> – Player to compute the reward for.</p></li>
+<li><p><strong>state</strong> – The current state of the game.</p></li>
+<li><p><strong>previous_action</strong> – The action taken at the previous environment step.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>A reward for the player provided.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>float</p>
 </dd>
 </dl>
 </dd></dl>
@@ -160,34 +157,31 @@ the reward returned by this function will be for that player.</p>
 inheritance.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="rlgym.utils.reward_functions.common_rewards.ball_goal_rewards.VelocityBallToGoalReward.reset">
-<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initial_state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.reward_functions.common_rewards.ball_goal_rewards.VelocityBallToGoalReward.reset" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initial_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../../gamestates/index.html#rlgym.utils.gamestates.GameState" title="rlgym.utils.gamestates.GameState"><span class="pre">rlgym.utils.gamestates.GameState</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.reward_functions.common_rewards.ball_goal_rewards.VelocityBallToGoalReward.reset" title="Permalink to this definition"></a></dt>
 <dd><p>Function to be called each time the environment is reset. This is meant to enable users to design stateful reward
 functions that maintain information about the game throughout an episode to determine a reward.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>initial_state</strong> (<a class="reference internal" href="../../../gamestates/index.html#rlgym.utils.gamestates.GameState" title="rlgym.utils.gamestates.GameState"><em>rlgym.utils.gamestates.GameState</em></a>) – The initial state of the reset environment.</p>
+<dd class="field-odd"><p><strong>initial_state</strong> – The initial state of the reset environment.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rlgym.utils.reward_functions.common_rewards.ball_goal_rewards.VelocityBallToGoalReward.get_reward">
-<span class="sig-name descname"><span class="pre">get_reward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">player</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">previous_action</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.reward_functions.common_rewards.ball_goal_rewards.VelocityBallToGoalReward.get_reward" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_reward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">player</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../../gamestates/index.html#rlgym.utils.gamestates.PlayerData" title="rlgym.utils.gamestates.PlayerData"><span class="pre">rlgym.utils.gamestates.PlayerData</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../../gamestates/index.html#rlgym.utils.gamestates.GameState" title="rlgym.utils.gamestates.GameState"><span class="pre">rlgym.utils.gamestates.GameState</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">previous_action</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#rlgym.utils.reward_functions.common_rewards.ball_goal_rewards.VelocityBallToGoalReward.get_reward" title="Permalink to this definition"></a></dt>
 <dd><p>Function to compute the reward for a player. This function is given a player argument, and it is expected that
 the reward returned by this function will be for that player.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>player</strong> (<a class="reference internal" href="../../../gamestates/index.html#rlgym.utils.gamestates.PlayerData" title="rlgym.utils.gamestates.PlayerData"><em>rlgym.utils.gamestates.PlayerData</em></a>) – Player to compute the reward for.</p></li>
-<li><p><strong>state</strong> (<a class="reference internal" href="../../../gamestates/index.html#rlgym.utils.gamestates.GameState" title="rlgym.utils.gamestates.GameState"><em>rlgym.utils.gamestates.GameState</em></a>) – The current state of the game.</p></li>
-<li><p><strong>previous_action</strong> (<em>numpy.ndarray</em>) – The action taken at the previous environment step.</p></li>
+<li><p><strong>player</strong> – Player to compute the reward for.</p></li>
+<li><p><strong>state</strong> – The current state of the game.</p></li>
+<li><p><strong>previous_action</strong> – The action taken at the previous environment step.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>A reward for the player provided.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>float</p>
 </dd>
 </dl>
 </dd></dl>
@@ -202,34 +196,31 @@ the reward returned by this function will be for that player.</p>
 inheritance.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="rlgym.utils.reward_functions.common_rewards.ball_goal_rewards.BallYCoordinateReward.reset">
-<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initial_state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.reward_functions.common_rewards.ball_goal_rewards.BallYCoordinateReward.reset" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initial_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../../gamestates/index.html#rlgym.utils.gamestates.GameState" title="rlgym.utils.gamestates.GameState"><span class="pre">rlgym.utils.gamestates.GameState</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.reward_functions.common_rewards.ball_goal_rewards.BallYCoordinateReward.reset" title="Permalink to this definition"></a></dt>
 <dd><p>Function to be called each time the environment is reset. This is meant to enable users to design stateful reward
 functions that maintain information about the game throughout an episode to determine a reward.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>initial_state</strong> (<a class="reference internal" href="../../../gamestates/index.html#rlgym.utils.gamestates.GameState" title="rlgym.utils.gamestates.GameState"><em>rlgym.utils.gamestates.GameState</em></a>) – The initial state of the reset environment.</p>
+<dd class="field-odd"><p><strong>initial_state</strong> – The initial state of the reset environment.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rlgym.utils.reward_functions.common_rewards.ball_goal_rewards.BallYCoordinateReward.get_reward">
-<span class="sig-name descname"><span class="pre">get_reward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">player</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">previous_action</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.reward_functions.common_rewards.ball_goal_rewards.BallYCoordinateReward.get_reward" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_reward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">player</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../../gamestates/index.html#rlgym.utils.gamestates.PlayerData" title="rlgym.utils.gamestates.PlayerData"><span class="pre">rlgym.utils.gamestates.PlayerData</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../../gamestates/index.html#rlgym.utils.gamestates.GameState" title="rlgym.utils.gamestates.GameState"><span class="pre">rlgym.utils.gamestates.GameState</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">previous_action</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#rlgym.utils.reward_functions.common_rewards.ball_goal_rewards.BallYCoordinateReward.get_reward" title="Permalink to this definition"></a></dt>
 <dd><p>Function to compute the reward for a player. This function is given a player argument, and it is expected that
 the reward returned by this function will be for that player.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>player</strong> (<a class="reference internal" href="../../../gamestates/index.html#rlgym.utils.gamestates.PlayerData" title="rlgym.utils.gamestates.PlayerData"><em>rlgym.utils.gamestates.PlayerData</em></a>) – Player to compute the reward for.</p></li>
-<li><p><strong>state</strong> (<a class="reference internal" href="../../../gamestates/index.html#rlgym.utils.gamestates.GameState" title="rlgym.utils.gamestates.GameState"><em>rlgym.utils.gamestates.GameState</em></a>) – The current state of the game.</p></li>
-<li><p><strong>previous_action</strong> (<em>numpy.ndarray</em>) – The action taken at the previous environment step.</p></li>
+<li><p><strong>player</strong> – Player to compute the reward for.</p></li>
+<li><p><strong>state</strong> – The current state of the game.</p></li>
+<li><p><strong>previous_action</strong> – The action taken at the previous environment step.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>A reward for the player provided.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>float</p>
 </dd>
 </dl>
 </dd></dl>

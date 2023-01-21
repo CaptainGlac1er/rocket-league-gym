@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>rlgym.utils.gamestates.game_state &mdash; RLGym 2.0.1 documentation</title>
+  <title>rlgym.utils.gamestates.game_state &mdash; RLGym  documentation</title>
       <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
@@ -106,13 +106,8 @@
 </table>
 <dl class="py class">
 <dt class="sig sig-object py" id="rlgym.utils.gamestates.game_state.GameState">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rlgym.utils.gamestates.game_state.</span></span><span class="sig-name descname"><span class="pre">GameState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_floats</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.gamestates.game_state.GameState" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rlgym.utils.gamestates.game_state.</span></span><span class="sig-name descname"><span class="pre">GameState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_floats</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.gamestates.game_state.GameState" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>state_floats</strong> (<em>List</em><em>[</em><em>float</em><em>]</em>) – </p>
-</dd>
-</dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="rlgym.utils.gamestates.game_state.GameState.BOOST_PADS_LENGTH">
 <span class="sig-name descname"><span class="pre">BOOST_PADS_LENGTH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">34</span></em><a class="headerlink" href="#rlgym.utils.gamestates.game_state.GameState.BOOST_PADS_LENGTH" title="Permalink to this definition"></a></dt>
@@ -140,25 +135,15 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rlgym.utils.gamestates.game_state.GameState.decode">
-<span class="sig-name descname"><span class="pre">decode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_floats</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.gamestates.game_state.GameState.decode" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">decode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_floats</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.gamestates.game_state.GameState.decode" title="Permalink to this definition"></a></dt>
 <dd><p>Decode a string containing the current game state from the Bakkesmod plugin.
 :param state_floats: String containing the game state.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>state_floats</strong> (<em>List</em><em>[</em><em>float</em><em>]</em>) – </p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rlgym.utils.gamestates.game_state.GameState._decode">
-<span class="sig-name descname"><span class="pre">_decode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_vals</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.gamestates.game_state.GameState._decode" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>state_vals</strong> (<em>List</em><em>[</em><em>float</em><em>]</em>) – </p>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">_decode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_vals</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.gamestates.game_state.GameState._decode" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rlgym.utils.gamestates.game_state.GameState._decode_player">

@@ -43,16 +43,16 @@ Attributes
 
    
 
-.. py:class:: StateWrapper(blue_count = 0, orange_count = 0, game_state=None)
+.. py:class:: StateWrapper(blue_count: int = 0, orange_count: int = 0, game_state=None)
 
    Bases: :py:obj:`object`
 
-   .. py:method:: _read_from_gamestate(game_state)
+   .. py:method:: _read_from_gamestate(game_state: rlgym.utils.gamestates.game_state.GameState)
 
       A function to modify the StateWrapper with values read in from a GameState object.
 
 
-   .. py:method:: format_state()
+   .. py:method:: format_state() -> str
 
       A function to format the values stored within a StateWrapper object. 
       These values are sent as a string to be applied to the game engine upon an environment reset.
@@ -61,16 +61,16 @@ Attributes
 
 
 
-.. py:class:: PhysicsWrapper(phys_obj = None)
+.. py:class:: PhysicsWrapper(phys_obj: rlgym.utils.gamestates.physics_object.PhysicsObject = None)
 
    Bases: :py:obj:`object`
 
-   .. py:method:: _read_from_physics_object(phys_obj)
+   .. py:method:: _read_from_physics_object(phys_obj: rlgym.utils.gamestates.physics_object.PhysicsObject)
 
       A function to modify PhysicsWrapper values from values in a PhysicsObject object.
 
 
-   .. py:method:: set_pos(x = None, y = None, z = None)
+   .. py:method:: set_pos(x: float = None, y: float = None, z: float = None)
 
       Sets position.
 
@@ -79,7 +79,7 @@ Attributes
       :param z: Float indicating z position value.
 
 
-   .. py:method:: set_lin_vel(x = None, y = None, z = None)
+   .. py:method:: set_lin_vel(x: float = None, y: float = None, z: float = None)
 
       Sets linear velocity.
 
@@ -88,7 +88,7 @@ Attributes
       :param z: Float indicating z velocity value.
 
 
-   .. py:method:: set_ang_vel(x = None, y = None, z = None)
+   .. py:method:: set_ang_vel(x: float = None, y: float = None, z: float = None)
 
       Sets angular velocity.
 
@@ -97,7 +97,7 @@ Attributes
       :param z: Float indicating z angular velocity value.
 
 
-   .. py:method:: _encode()
+   .. py:method:: _encode() -> str
 
       Function called by a StateWrapper to produce a state string.
 
@@ -105,21 +105,21 @@ Attributes
 
 
 
-.. py:class:: CarWrapper(team_num = -1, id = -1, player_data = None)
+.. py:class:: CarWrapper(team_num: int = -1, id: int = -1, player_data: rlgym.utils.gamestates.player_data.PlayerData = None)
 
    Bases: :py:obj:`PhysicsWrapper`
 
-   .. py:method:: _read_from_player_data(player_data)
+   .. py:method:: _read_from_player_data(player_data: rlgym.utils.gamestates.player_data.PlayerData)
 
       A function to modify CarWrapper values from values in a PlayerData object.
 
 
-   .. py:method:: set_rot(pitch = None, yaw = None, roll = None)
+   .. py:method:: set_rot(pitch: float = None, yaw: float = None, roll: float = None)
 
       Sets rotation in terms of euler angles.
 
 
-   .. py:method:: _encode()
+   .. py:method:: _encode() -> str
 
       Function called by a StateWrapper to produce a state string.
 

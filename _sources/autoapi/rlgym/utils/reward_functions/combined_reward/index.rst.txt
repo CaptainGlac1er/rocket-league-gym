@@ -17,13 +17,13 @@ Classes
 
 
 
-.. py:class:: CombinedReward(reward_functions, reward_weights = None)
+.. py:class:: CombinedReward(reward_functions: Tuple[rlgym.utils.reward_functions.RewardFunction, Ellipsis], reward_weights: Optional[Tuple[float, Ellipsis]] = None)
 
    Bases: :py:obj:`rlgym.utils.reward_functions.RewardFunction`
 
    A reward composed of multiple rewards.
 
-   .. py:method:: from_zipped(*rewards_and_weights)
+   .. py:method:: from_zipped(*rewards_and_weights: Union[rlgym.utils.reward_functions.RewardFunction, Tuple[rlgym.utils.reward_functions.RewardFunction, float]]) -> CombinedReward
       :classmethod:
 
       Alternate constructor which takes any number of either rewards, or (reward, weight) tuples.
@@ -31,14 +31,14 @@ Classes
       :param rewards_and_weights: a sequence of RewardFunction or (RewardFunction, weight) tuples
 
 
-   .. py:method:: reset(initial_state)
+   .. py:method:: reset(initial_state: rlgym.utils.gamestates.GameState) -> None
 
       Resets underlying reward functions.
 
       :param initial_state: The initial state of the reset environment.
 
 
-   .. py:method:: get_reward(player, state, previous_action)
+   .. py:method:: get_reward(player: rlgym.utils.gamestates.PlayerData, state: rlgym.utils.gamestates.GameState, previous_action: numpy.ndarray) -> float
 
       Returns the reward for a player on the terminal state.
 
@@ -49,7 +49,7 @@ Classes
       :return: The combined rewards for the player on the state.
 
 
-   .. py:method:: get_final_reward(player, state, previous_action)
+   .. py:method:: get_final_reward(player: rlgym.utils.gamestates.PlayerData, state: rlgym.utils.gamestates.GameState, previous_action: numpy.ndarray) -> float
 
       Returns the reward for a player on the terminal state.
 

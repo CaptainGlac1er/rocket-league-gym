@@ -22,7 +22,7 @@ Classes
 
 
 
-.. py:class:: GameState(state_floats = None)
+.. py:class:: GameState(state_floats: List[float] = None)
 
    Bases: :py:obj:`object`
 
@@ -50,13 +50,13 @@ Classes
 
       
 
-   .. py:method:: decode(state_floats)
+   .. py:method:: decode(state_floats: List[float])
 
       Decode a string containing the current game state from the Bakkesmod plugin.
       :param state_floats: String containing the game state.
 
 
-   .. py:method:: _decode(state_vals)
+   .. py:method:: _decode(state_vals: List[float])
 
 
    .. py:method:: _decode_player(full_player_data)

@@ -74,12 +74,12 @@ Functions
 .. py:function:: run_injector()
 
 
-.. py:function:: launch_rocket_league(pipe_id, launch_preference = LaunchPreference.EPIC)
+.. py:function:: launch_rocket_league(pipe_id, launch_preference: str = LaunchPreference.EPIC) -> Optional[subprocess.Popen]
 
    Launches Rocket League but does not connect to it.
 
 
-.. py:function:: try_get_steam_executable_path()
+.. py:function:: try_get_steam_executable_path() -> Optional[pathlib.Path]
 
    Tries to find the path of the Steam executable.
    Has platform specific code.

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>rlgym.utils.obs_builders.advanced_obs &mdash; RLGym 2.0.1 documentation</title>
+  <title>rlgym.utils.obs_builders.advanced_obs &mdash; RLGym  documentation</title>
       <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
@@ -121,68 +121,47 @@ inheritance.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rlgym.utils.obs_builders.advanced_obs.AdvancedObs.reset">
-<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initial_state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.obs_builders.advanced_obs.AdvancedObs.reset" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initial_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../gamestates/index.html#rlgym.utils.gamestates.GameState" title="rlgym.utils.gamestates.GameState"><span class="pre">rlgym.utils.gamestates.GameState</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.obs_builders.advanced_obs.AdvancedObs.reset" title="Permalink to this definition"></a></dt>
 <dd><p>Function to be called each time the environment is reset. Note that this does not need to return anything,
 the environment will call <cite>build_obs</cite> automatically after reset, so the initial observation for a policy will be
 constructed in the same way as every other observation.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>initial_state</strong> (<a class="reference internal" href="../../gamestates/index.html#rlgym.utils.gamestates.GameState" title="rlgym.utils.gamestates.GameState"><em>rlgym.utils.gamestates.GameState</em></a>) – The initial game state of the reset environment.</p>
+<dd class="field-odd"><p><strong>initial_state</strong> – The initial game state of the reset environment.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rlgym.utils.obs_builders.advanced_obs.AdvancedObs.build_obs">
-<span class="sig-name descname"><span class="pre">build_obs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">player</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">previous_action</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.obs_builders.advanced_obs.AdvancedObs.build_obs" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">build_obs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">player</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../gamestates/index.html#rlgym.utils.gamestates.PlayerData" title="rlgym.utils.gamestates.PlayerData"><span class="pre">rlgym.utils.gamestates.PlayerData</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../gamestates/index.html#rlgym.utils.gamestates.GameState" title="rlgym.utils.gamestates.GameState"><span class="pre">rlgym.utils.gamestates.GameState</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">previous_action</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="headerlink" href="#rlgym.utils.obs_builders.advanced_obs.AdvancedObs.build_obs" title="Permalink to this definition"></a></dt>
 <dd><p>Function to build observations for a policy. This is where all observations will be constructed every step and
 every reset. This function is given a player argument, and it is expected that the observation returned by this
 function will contain information from the perspective of that player. This function is called once for each
 agent automatically at every step.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>player</strong> (<a class="reference internal" href="../../gamestates/index.html#rlgym.utils.gamestates.PlayerData" title="rlgym.utils.gamestates.PlayerData"><em>rlgym.utils.gamestates.PlayerData</em></a>) – The player to build an observation for. The observation returned should be from the perspective of</p></li>
-<li><p><strong>state</strong> (<a class="reference internal" href="../../gamestates/index.html#rlgym.utils.gamestates.GameState" title="rlgym.utils.gamestates.GameState"><em>rlgym.utils.gamestates.GameState</em></a>) – </p></li>
-<li><p><strong>previous_action</strong> (<em>numpy.ndarray</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>Any</p>
+<dd class="field-odd"><p><strong>player</strong> – The player to build an observation for. The observation returned should be from the perspective of</p>
 </dd>
 </dl>
 <p>this player.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>state</strong> (<a class="reference internal" href="../../gamestates/index.html#rlgym.utils.gamestates.GameState" title="rlgym.utils.gamestates.GameState"><em>rlgym.utils.gamestates.GameState</em></a>) – The current state of the game.</p></li>
-<li><p><strong>previous_action</strong> (<em>numpy.ndarray</em>) – The action taken at the previous environment step.</p></li>
-<li><p><strong>player</strong> (<a class="reference internal" href="../../gamestates/index.html#rlgym.utils.gamestates.PlayerData" title="rlgym.utils.gamestates.PlayerData"><em>rlgym.utils.gamestates.PlayerData</em></a>) – </p></li>
+<li><p><strong>state</strong> – The current state of the game.</p></li>
+<li><p><strong>previous_action</strong> – The action taken at the previous environment step.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>An observation for the player provided.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>Any</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rlgym.utils.obs_builders.advanced_obs.AdvancedObs._add_player_to_obs">
-<span class="sig-name descname"><span class="pre">_add_player_to_obs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">player</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ball</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inverted</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.obs_builders.advanced_obs.AdvancedObs._add_player_to_obs" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>obs</strong> (<em>List</em>) – </p></li>
-<li><p><strong>player</strong> (<a class="reference internal" href="../../gamestates/index.html#rlgym.utils.gamestates.PlayerData" title="rlgym.utils.gamestates.PlayerData"><em>rlgym.utils.gamestates.PlayerData</em></a>) – </p></li>
-<li><p><strong>ball</strong> (<a class="reference internal" href="../../gamestates/index.html#rlgym.utils.gamestates.PhysicsObject" title="rlgym.utils.gamestates.PhysicsObject"><em>rlgym.utils.gamestates.PhysicsObject</em></a>) – </p></li>
-<li><p><strong>inverted</strong> (<em>bool</em>) – </p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">_add_player_to_obs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">player</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../gamestates/index.html#rlgym.utils.gamestates.PlayerData" title="rlgym.utils.gamestates.PlayerData"><span class="pre">rlgym.utils.gamestates.PlayerData</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">ball</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../gamestates/index.html#rlgym.utils.gamestates.PhysicsObject" title="rlgym.utils.gamestates.PhysicsObject"><span class="pre">rlgym.utils.gamestates.PhysicsObject</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">inverted</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.obs_builders.advanced_obs.AdvancedObs._add_player_to_obs" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 

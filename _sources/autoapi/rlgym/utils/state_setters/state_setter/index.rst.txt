@@ -29,7 +29,7 @@ Classes
    Helper class that provides a standard way to create an ABC using
    inheritance.
 
-   .. py:method:: build_wrapper(max_team_size, spawn_opponents)
+   .. py:method:: build_wrapper(max_team_size: int, spawn_opponents: bool) -> rlgym.utils.state_setters.wrappers.state_wrapper.StateWrapper
 
       Function to be called each time the environment is reset.
 
@@ -40,7 +40,7 @@ Classes
       long as team size is smaller or equal to max_team_size
 
 
-   .. py:method:: reset(state_wrapper)
+   .. py:method:: reset(state_wrapper: rlgym.utils.state_setters.wrappers.state_wrapper.StateWrapper)
       :abstractmethod:
 
       Function to be called each time the environment is reset.

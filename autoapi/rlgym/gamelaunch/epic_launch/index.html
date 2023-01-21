@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>rlgym.gamelaunch.epic_launch &mdash; RLGym 2.0.1 documentation</title>
+  <title>rlgym.gamelaunch.epic_launch &mdash; RLGym  documentation</title>
       <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
@@ -97,84 +97,47 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#rlgym.gamelaunch.epic_launch.launch_with_epic_simple" title="rlgym.gamelaunch.epic_launch.launch_with_epic_simple"><code class="xref py py-obj docutils literal notranslate"><span class="pre">launch_with_epic_simple</span></code></a>(ideal_args)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#rlgym.gamelaunch.epic_launch.launch_with_epic_simple" title="rlgym.gamelaunch.epic_launch.launch_with_epic_simple"><code class="xref py py-obj docutils literal notranslate"><span class="pre">launch_with_epic_simple</span></code></a>(→ Optional[subprocess.Popen])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#rlgym.gamelaunch.epic_launch.launch_with_epic_login_trick" title="rlgym.gamelaunch.epic_launch.launch_with_epic_login_trick"><code class="xref py py-obj docutils literal notranslate"><span class="pre">launch_with_epic_login_trick</span></code></a>(ideal_args)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#rlgym.gamelaunch.epic_launch.launch_with_epic_login_trick" title="rlgym.gamelaunch.epic_launch.launch_with_epic_login_trick"><code class="xref py py-obj docutils literal notranslate"><span class="pre">launch_with_epic_login_trick</span></code></a>(→ Optional[subprocess.Popen])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#rlgym.gamelaunch.epic_launch.get_epic_login_trick_args" title="rlgym.gamelaunch.epic_launch.get_epic_login_trick_args"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_epic_login_trick_args</span></code></a>(ideal_args)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#rlgym.gamelaunch.epic_launch.get_epic_login_trick_args" title="rlgym.gamelaunch.epic_launch.get_epic_login_trick_args"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_epic_login_trick_args</span></code></a>(→ Optional[subprocess.Popen])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#rlgym.gamelaunch.epic_launch.locate_epic_games_launcher_rocket_league_binary" title="rlgym.gamelaunch.epic_launch.locate_epic_games_launcher_rocket_league_binary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">locate_epic_games_launcher_rocket_league_binary</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#rlgym.gamelaunch.epic_launch.locate_epic_games_launcher_rocket_league_binary" title="rlgym.gamelaunch.epic_launch.locate_epic_games_launcher_rocket_league_binary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">locate_epic_games_launcher_rocket_league_binary</span></code></a>(...)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#rlgym.gamelaunch.epic_launch.get_running_process" title="rlgym.gamelaunch.epic_launch.get_running_process"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_running_process</span></code></a>(process_name, required_args)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#rlgym.gamelaunch.epic_launch.get_running_process" title="rlgym.gamelaunch.epic_launch.get_running_process"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_running_process</span></code></a>(→ Optional[psutil.Process])</p></td>
 <td><p></p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py function">
 <dt class="sig sig-object py" id="rlgym.gamelaunch.epic_launch.launch_with_epic_simple">
-<span class="sig-prename descclassname"><span class="pre">rlgym.gamelaunch.epic_launch.</span></span><span class="sig-name descname"><span class="pre">launch_with_epic_simple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ideal_args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.gamelaunch.epic_launch.launch_with_epic_simple" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>ideal_args</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – </p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>Optional[subprocess.Popen]</p>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-prename descclassname"><span class="pre">rlgym.gamelaunch.epic_launch.</span></span><span class="sig-name descname"><span class="pre">launch_with_epic_simple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ideal_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">subprocess.Popen</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#rlgym.gamelaunch.epic_launch.launch_with_epic_simple" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="rlgym.gamelaunch.epic_launch.launch_with_epic_login_trick">
-<span class="sig-prename descclassname"><span class="pre">rlgym.gamelaunch.epic_launch.</span></span><span class="sig-name descname"><span class="pre">launch_with_epic_login_trick</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ideal_args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.gamelaunch.epic_launch.launch_with_epic_login_trick" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>ideal_args</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – </p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>Optional[subprocess.Popen]</p>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-prename descclassname"><span class="pre">rlgym.gamelaunch.epic_launch.</span></span><span class="sig-name descname"><span class="pre">launch_with_epic_login_trick</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ideal_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">subprocess.Popen</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#rlgym.gamelaunch.epic_launch.launch_with_epic_login_trick" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="rlgym.gamelaunch.epic_launch.get_epic_login_trick_args">
-<span class="sig-prename descclassname"><span class="pre">rlgym.gamelaunch.epic_launch.</span></span><span class="sig-name descname"><span class="pre">get_epic_login_trick_args</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ideal_args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.gamelaunch.epic_launch.get_epic_login_trick_args" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>ideal_args</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – </p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>Optional[subprocess.Popen]</p>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-prename descclassname"><span class="pre">rlgym.gamelaunch.epic_launch.</span></span><span class="sig-name descname"><span class="pre">get_epic_login_trick_args</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ideal_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">subprocess.Popen</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#rlgym.gamelaunch.epic_launch.get_epic_login_trick_args" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="rlgym.gamelaunch.epic_launch.locate_epic_games_launcher_rocket_league_binary">
-<span class="sig-prename descclassname"><span class="pre">rlgym.gamelaunch.epic_launch.</span></span><span class="sig-name descname"><span class="pre">locate_epic_games_launcher_rocket_league_binary</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.gamelaunch.epic_launch.locate_epic_games_launcher_rocket_league_binary" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>Optional[pathlib.Path]</p>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-prename descclassname"><span class="pre">rlgym.gamelaunch.epic_launch.</span></span><span class="sig-name descname"><span class="pre">locate_epic_games_launcher_rocket_league_binary</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">pathlib.Path</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#rlgym.gamelaunch.epic_launch.locate_epic_games_launcher_rocket_league_binary" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="rlgym.gamelaunch.epic_launch.get_running_process">
-<span class="sig-prename descclassname"><span class="pre">rlgym.gamelaunch.epic_launch.</span></span><span class="sig-name descname"><span class="pre">get_running_process</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">process_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">required_args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.gamelaunch.epic_launch.get_running_process" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>required_args</strong> (<em>Set</em><em>[</em><em>str</em><em>]</em>) – </p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>Optional[psutil.Process]</p>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-prename descclassname"><span class="pre">rlgym.gamelaunch.epic_launch.</span></span><span class="sig-name descname"><span class="pre">get_running_process</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">process_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">required_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">psutil.Process</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#rlgym.gamelaunch.epic_launch.get_running_process" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="rlgym.gamelaunch.epic_launch.WrongProcessArgs">

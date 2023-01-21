@@ -52,7 +52,7 @@ Classes
    Helper class that provides a standard way to create an ABC using
    inheritance.
 
-   .. py:method:: reset(initial_state)
+   .. py:method:: reset(initial_state: rlgym.utils.gamestates.GameState)
       :abstractmethod:
 
       Function to be called each time the environment is reset.
@@ -60,7 +60,7 @@ Classes
       :param initial_state: The initial state of the reset environment.
 
 
-   .. py:method:: is_terminal(current_state)
+   .. py:method:: is_terminal(current_state: rlgym.utils.gamestates.GameState) -> bool
       :abstractmethod:
 
       Function to determine if a game state is terminal. This will be called once per step, and must return either
@@ -79,7 +79,7 @@ Classes
    Helper class that provides a standard way to create an ABC using
    inheritance.
 
-   .. py:method:: reset(initial_state)
+   .. py:method:: reset(initial_state: rlgym.utils.gamestates.GameState)
       :abstractmethod:
 
       Function to be called each time the environment is reset. This is meant to enable users to design stateful reward
@@ -88,7 +88,7 @@ Classes
       :param initial_state: The initial state of the reset environment.
 
 
-   .. py:method:: pre_step(state)
+   .. py:method:: pre_step(state: rlgym.utils.gamestates.GameState)
 
       Function to pre-compute values each step. This function is called only once each step, before get_reward is
       called for each player.
@@ -96,7 +96,7 @@ Classes
       :param state: The current state of the game.
 
 
-   .. py:method:: get_reward(player, state, previous_action)
+   .. py:method:: get_reward(player: rlgym.utils.gamestates.PlayerData, state: rlgym.utils.gamestates.GameState, previous_action: numpy.ndarray) -> float
       :abstractmethod:
 
       Function to compute the reward for a player. This function is given a player argument, and it is expected that
@@ -109,7 +109,7 @@ Classes
       :return: A reward for the player provided.
 
 
-   .. py:method:: get_final_reward(player, state, previous_action)
+   .. py:method:: get_final_reward(player: rlgym.utils.gamestates.PlayerData, state: rlgym.utils.gamestates.GameState, previous_action: numpy.ndarray) -> float
 
       Function to compute the reward for a player at the final step of an episode. This will be called only once, when
       it is determined that the current state is a terminal one. This may be useful for sparse reward signals that only
@@ -130,14 +130,14 @@ Classes
    Helper class that provides a standard way to create an ABC using
    inheritance.
 
-   .. py:method:: get_obs_space()
+   .. py:method:: get_obs_space() -> gym.spaces.Space
 
       Function that returns the observation space type. It will be called during the initialization of the environment.
 
       :return: The type of the observation space
 
 
-   .. py:method:: reset(initial_state)
+   .. py:method:: reset(initial_state: rlgym.utils.gamestates.GameState)
       :abstractmethod:
 
       Function to be called each time the environment is reset. Note that this does not need to return anything,
@@ -147,7 +147,7 @@ Classes
       :param initial_state: The initial game state of the reset environment.
 
 
-   .. py:method:: pre_step(state)
+   .. py:method:: pre_step(state: rlgym.utils.gamestates.GameState)
 
       Function to pre-compute values each step. This function is called only once each step, before build_obs is
       called for each player.
@@ -155,7 +155,7 @@ Classes
       :param state: The current state of the game.
 
 
-   .. py:method:: build_obs(player, state, previous_action)
+   .. py:method:: build_obs(player: rlgym.utils.gamestates.PlayerData, state: rlgym.utils.gamestates.GameState, previous_action: numpy.ndarray) -> Any
       :abstractmethod:
 
       Function to build observations for a policy. This is where all observations will be constructed every step and
@@ -180,7 +180,7 @@ Classes
    Helper class that provides a standard way to create an ABC using
    inheritance.
 
-   .. py:method:: build_wrapper(max_team_size, spawn_opponents)
+   .. py:method:: build_wrapper(max_team_size: int, spawn_opponents: bool) -> rlgym.utils.state_setters.wrappers.state_wrapper.StateWrapper
 
       Function to be called each time the environment is reset.
 
@@ -191,7 +191,7 @@ Classes
       long as team size is smaller or equal to max_team_size
 
 
-   .. py:method:: reset(state_wrapper)
+   .. py:method:: reset(state_wrapper: rlgym.utils.state_setters.wrappers.state_wrapper.StateWrapper)
       :abstractmethod:
 
       Function to be called each time the environment is reset.
@@ -210,7 +210,7 @@ Classes
    Helper class that provides a standard way to create an ABC using
    inheritance.
 
-   .. py:method:: get_action_space()
+   .. py:method:: get_action_space() -> gym.spaces.Space
       :abstractmethod:
 
       Function that returns the action space type. It will be called during the initialization of the environment.
@@ -218,7 +218,7 @@ Classes
       :return: The type of the action space
 
 
-   .. py:method:: parse_actions(actions, state)
+   .. py:method:: parse_actions(actions: Any, state: rlgym.utils.gamestates.GameState) -> numpy.ndarray
       :abstractmethod:
 
       Function that parses actions from the action space into a format that rlgym understands.

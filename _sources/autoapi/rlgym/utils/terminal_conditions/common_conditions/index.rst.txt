@@ -25,30 +25,30 @@ Classes
 
 
 
-.. py:class:: TimeoutCondition(max_steps)
+.. py:class:: TimeoutCondition(max_steps: int)
 
    Bases: :py:obj:`rlgym.utils.terminal_conditions.TerminalCondition`
 
    A condition that will terminate an episode after some number of steps.
 
-   .. py:method:: reset(initial_state)
+   .. py:method:: reset(initial_state: rlgym.utils.gamestates.GameState)
 
       Reset the step counter.
 
 
-   .. py:method:: is_terminal(current_state)
+   .. py:method:: is_terminal(current_state: rlgym.utils.gamestates.GameState) -> bool
 
       Increment the current step counter and return `True` if `max_steps` have passed.
 
 
 
-.. py:class:: NoTouchTimeoutCondition(max_steps)
+.. py:class:: NoTouchTimeoutCondition(max_steps: int)
 
    Bases: :py:obj:`TimeoutCondition`
 
    A condition that will terminate an episode after some number of steps.
 
-   .. py:method:: is_terminal(current_state)
+   .. py:method:: is_terminal(current_state: rlgym.utils.gamestates.GameState)
 
       Increment the current step counter and return `True` if `max_steps` have passed.
 
@@ -60,14 +60,14 @@ Classes
 
    A condition that will terminate an episode as soon as a goal is scored by either side.
 
-   .. py:method:: reset(initial_state)
+   .. py:method:: reset(initial_state: rlgym.utils.gamestates.GameState)
 
       Function to be called each time the environment is reset.
 
       :param initial_state: The initial state of the reset environment.
 
 
-   .. py:method:: is_terminal(current_state)
+   .. py:method:: is_terminal(current_state: rlgym.utils.gamestates.GameState) -> bool
 
       Check to see if the game score for either team has been changed. If either score has changed, update the current
       known scores for both teams and return `True`. Note that the known game scores are never reset for this object
@@ -82,14 +82,14 @@ Classes
    Helper class that provides a standard way to create an ABC using
    inheritance.
 
-   .. py:method:: reset(initial_state)
+   .. py:method:: reset(initial_state: rlgym.utils.gamestates.GameState)
 
       Function to be called each time the environment is reset.
 
       :param initial_state: The initial state of the reset environment.
 
 
-   .. py:method:: is_terminal(current_state)
+   .. py:method:: is_terminal(current_state: rlgym.utils.gamestates.GameState) -> bool
 
       Return `True` if the last touch does not have the same ID as the last touch from the initial state.
 

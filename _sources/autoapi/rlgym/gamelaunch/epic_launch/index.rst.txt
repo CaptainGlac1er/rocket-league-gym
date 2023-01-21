@@ -21,19 +21,19 @@ Functions
 
 
 
-.. py:function:: launch_with_epic_simple(ideal_args)
+.. py:function:: launch_with_epic_simple(ideal_args: List[str]) -> Optional[subprocess.Popen]
 
 
-.. py:function:: launch_with_epic_login_trick(ideal_args)
+.. py:function:: launch_with_epic_login_trick(ideal_args: List[str]) -> Optional[subprocess.Popen]
 
 
-.. py:function:: get_epic_login_trick_args(ideal_args)
+.. py:function:: get_epic_login_trick_args(ideal_args: List[str]) -> Optional[subprocess.Popen]
 
 
-.. py:function:: locate_epic_games_launcher_rocket_league_binary()
+.. py:function:: locate_epic_games_launcher_rocket_league_binary() -> Optional[pathlib.Path]
 
 
-.. py:function:: get_running_process(process_name, required_args)
+.. py:function:: get_running_process(process_name, required_args: Set[str]) -> Optional[psutil.Process]
 
 
 .. py:exception:: WrongProcessArgs

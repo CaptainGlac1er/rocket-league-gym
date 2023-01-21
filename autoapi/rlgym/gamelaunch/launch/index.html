@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>rlgym.gamelaunch.launch &mdash; RLGym 2.0.1 documentation</title>
+  <title>rlgym.gamelaunch.launch &mdash; RLGym  documentation</title>
       <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
@@ -117,10 +117,10 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#rlgym.gamelaunch.launch.run_injector" title="rlgym.gamelaunch.launch.run_injector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run_injector</span></code></a>()</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#rlgym.gamelaunch.launch.launch_rocket_league" title="rlgym.gamelaunch.launch.launch_rocket_league"><code class="xref py py-obj docutils literal notranslate"><span class="pre">launch_rocket_league</span></code></a>(pipe_id[, launch_preference])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#rlgym.gamelaunch.launch.launch_rocket_league" title="rlgym.gamelaunch.launch.launch_rocket_league"><code class="xref py py-obj docutils literal notranslate"><span class="pre">launch_rocket_league</span></code></a>(→ Optional[subprocess.Popen])</p></td>
 <td><p>Launches Rocket League but does not connect to it.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#rlgym.gamelaunch.launch.try_get_steam_executable_path" title="rlgym.gamelaunch.launch.try_get_steam_executable_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">try_get_steam_executable_path</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#rlgym.gamelaunch.launch.try_get_steam_executable_path" title="rlgym.gamelaunch.launch.try_get_steam_executable_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">try_get_steam_executable_path</span></code></a>(→ Optional[pathlib.Path])</p></td>
 <td><p>Tries to find the path of the Steam executable.</p></td>
 </tr>
 </tbody>
@@ -182,28 +182,15 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="rlgym.gamelaunch.launch.launch_rocket_league">
-<span class="sig-prename descclassname"><span class="pre">rlgym.gamelaunch.launch.</span></span><span class="sig-name descname"><span class="pre">launch_rocket_league</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pipe_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">launch_preference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">LaunchPreference.EPIC</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.gamelaunch.launch.launch_rocket_league" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">rlgym.gamelaunch.launch.</span></span><span class="sig-name descname"><span class="pre">launch_rocket_league</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pipe_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">launch_preference</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">LaunchPreference.EPIC</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">subprocess.Popen</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#rlgym.gamelaunch.launch.launch_rocket_league" title="Permalink to this definition"></a></dt>
 <dd><p>Launches Rocket League but does not connect to it.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>launch_preference</strong> (<em>str</em>) – </p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>Optional[subprocess.Popen]</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="rlgym.gamelaunch.launch.try_get_steam_executable_path">
-<span class="sig-prename descclassname"><span class="pre">rlgym.gamelaunch.launch.</span></span><span class="sig-name descname"><span class="pre">try_get_steam_executable_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.gamelaunch.launch.try_get_steam_executable_path" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">rlgym.gamelaunch.launch.</span></span><span class="sig-name descname"><span class="pre">try_get_steam_executable_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">pathlib.Path</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#rlgym.gamelaunch.launch.try_get_steam_executable_path" title="Permalink to this definition"></a></dt>
 <dd><p>Tries to find the path of the Steam executable.
 Has platform specific code.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>Optional[pathlib.Path]</p>
-</dd>
-</dl>
 </dd></dl>
 
 </section>

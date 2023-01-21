@@ -26,43 +26,43 @@ Classes
 
    Bases: :py:obj:`object`
 
-   .. py:method:: decode_car_data(car_data)
+   .. py:method:: decode_car_data(car_data: numpy.ndarray)
 
       Function to decode the physics state of a car from the game state array.
       :param car_data: Slice of game state array containing the car data to decode.
 
 
-   .. py:method:: decode_ball_data(ball_data)
+   .. py:method:: decode_ball_data(ball_data: numpy.ndarray)
 
       Function to decode the physics state of the ball from the game state array.
       :param ball_data: Slice of game state array containing the ball data to decode.
 
 
-   .. py:method:: forward()
+   .. py:method:: forward() -> numpy.ndarray
 
 
-   .. py:method:: right()
+   .. py:method:: right() -> numpy.ndarray
 
 
-   .. py:method:: left()
+   .. py:method:: left() -> numpy.ndarray
 
 
-   .. py:method:: up()
+   .. py:method:: up() -> numpy.ndarray
 
 
-   .. py:method:: pitch()
+   .. py:method:: pitch() -> float
 
 
-   .. py:method:: yaw()
+   .. py:method:: yaw() -> float
 
 
-   .. py:method:: roll()
+   .. py:method:: roll() -> float
 
 
-   .. py:method:: euler_angles()
+   .. py:method:: euler_angles() -> numpy.ndarray
 
 
-   .. py:method:: rotation_mtx()
+   .. py:method:: rotation_mtx() -> numpy.ndarray
 
 
    .. py:method:: serialize()

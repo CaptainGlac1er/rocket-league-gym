@@ -34,7 +34,7 @@ Classes
    Helper class that provides a standard way to create an ABC using
    inheritance.
 
-   .. py:method:: reset(initial_state)
+   .. py:method:: reset(initial_state: rlgym.utils.gamestates.GameState)
       :abstractmethod:
 
       Function to be called each time the environment is reset.
@@ -42,7 +42,7 @@ Classes
       :param initial_state: The initial state of the reset environment.
 
 
-   .. py:method:: is_terminal(current_state)
+   .. py:method:: is_terminal(current_state: rlgym.utils.gamestates.GameState) -> bool
       :abstractmethod:
 
       Function to determine if a game state is terminal. This will be called once per step, and must return either

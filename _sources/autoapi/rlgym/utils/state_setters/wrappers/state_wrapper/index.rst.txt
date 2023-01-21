@@ -22,7 +22,7 @@ Classes
 
 
 
-.. py:class:: StateWrapper(blue_count = 0, orange_count = 0, game_state=None)
+.. py:class:: StateWrapper(blue_count: int = 0, orange_count: int = 0, game_state=None)
 
    Bases: :py:obj:`object`
 
@@ -36,18 +36,18 @@ Classes
 
       
 
-   .. py:method:: _read_from_gamestate(game_state)
+   .. py:method:: _read_from_gamestate(game_state: rlgym.utils.gamestates.game_state.GameState)
 
       A function to modify the StateWrapper with values read in from a GameState object.
 
 
-   .. py:method:: blue_cars()
+   .. py:method:: blue_cars() -> List[rlgym.utils.state_setters.wrappers.CarWrapper]
 
 
-   .. py:method:: orange_cars()
+   .. py:method:: orange_cars() -> List[rlgym.utils.state_setters.wrappers.CarWrapper]
 
 
-   .. py:method:: format_state()
+   .. py:method:: format_state() -> list
 
       A function to format the values stored within a StateWrapper object.
       These values are sent as a string to be applied to the game engine upon an environment reset.

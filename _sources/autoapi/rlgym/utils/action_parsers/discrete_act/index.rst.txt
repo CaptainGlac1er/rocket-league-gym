@@ -23,14 +23,14 @@ Classes
 
    Simple discrete action space. All the analog actions have 3 bins by default: -1, 0 and 1.
 
-   .. py:method:: get_action_space()
+   .. py:method:: get_action_space() -> gym.spaces.Space
 
       Function that returns the action space type. It will be called during the initialization of the environment.
 
       :return: The type of the action space
 
 
-   .. py:method:: parse_actions(actions, state)
+   .. py:method:: parse_actions(actions: numpy.ndarray, state: rlgym.utils.gamestates.GameState) -> numpy.ndarray
 
       Function that parses actions from the action space into a format that rlgym understands.
       The expected return value is a numpy float array of size (n, 8) where n is the number of agents.

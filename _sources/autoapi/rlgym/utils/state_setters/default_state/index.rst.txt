@@ -42,7 +42,7 @@ Classes
 
       
 
-   .. py:method:: reset(state_wrapper)
+   .. py:method:: reset(state_wrapper: rlgym.utils.state_setters.StateWrapper)
 
       Modifies state_wrapper values to emulate a randomly selected default kickoff.
 

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>rlgym.utils.state_setters.state_wrapper &mdash; RLGym 2.0.1 documentation</title>
+  <title>rlgym.utils.state_setters.state_wrapper &mdash; RLGym  documentation</title>
       <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
@@ -139,38 +139,22 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="rlgym.utils.state_setters.state_wrapper.StateWrapper">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rlgym.utils.state_setters.state_wrapper.</span></span><span class="sig-name descname"><span class="pre">StateWrapper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">blue_count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orange_count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">game_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.state_wrapper.StateWrapper" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rlgym.utils.state_setters.state_wrapper.</span></span><span class="sig-name descname"><span class="pre">StateWrapper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">blue_count</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orange_count</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">game_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.state_wrapper.StateWrapper" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>blue_count</strong> (<em>int</em>) – </p></li>
-<li><p><strong>orange_count</strong> (<em>int</em>) – </p></li>
-</ul>
-</dd>
-</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="rlgym.utils.state_setters.state_wrapper.StateWrapper._read_from_gamestate">
-<span class="sig-name descname"><span class="pre">_read_from_gamestate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">game_state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.state_wrapper.StateWrapper._read_from_gamestate" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">_read_from_gamestate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">game_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../gamestates/game_state/index.html#rlgym.utils.gamestates.game_state.GameState" title="rlgym.utils.gamestates.game_state.GameState"><span class="pre">rlgym.utils.gamestates.game_state.GameState</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.state_wrapper.StateWrapper._read_from_gamestate" title="Permalink to this definition"></a></dt>
 <dd><p>A function to modify the StateWrapper with values read in from a GameState object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>game_state</strong> (<a class="reference internal" href="../../gamestates/game_state/index.html#rlgym.utils.gamestates.game_state.GameState" title="rlgym.utils.gamestates.game_state.GameState"><em>rlgym.utils.gamestates.game_state.GameState</em></a>) – </p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rlgym.utils.state_setters.state_wrapper.StateWrapper.format_state">
-<span class="sig-name descname"><span class="pre">format_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.state_wrapper.StateWrapper.format_state" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">format_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#rlgym.utils.state_setters.state_wrapper.StateWrapper.format_state" title="Permalink to this definition"></a></dt>
 <dd><p>A function to format the values stored within a StateWrapper object.
 These values are sent as a string to be applied to the game engine upon an environment reset.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>String containing all state values.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>str</p>
 </dd>
 </dl>
 </dd></dl>
@@ -179,34 +163,24 @@ These values are sent as a string to be applied to the game engine upon an envir
 
 <dl class="py class">
 <dt class="sig sig-object py" id="rlgym.utils.state_setters.state_wrapper.PhysicsWrapper">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rlgym.utils.state_setters.state_wrapper.</span></span><span class="sig-name descname"><span class="pre">PhysicsWrapper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">phys_obj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.state_wrapper.PhysicsWrapper" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rlgym.utils.state_setters.state_wrapper.</span></span><span class="sig-name descname"><span class="pre">PhysicsWrapper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">phys_obj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../gamestates/physics_object/index.html#rlgym.utils.gamestates.physics_object.PhysicsObject" title="rlgym.utils.gamestates.physics_object.PhysicsObject"><span class="pre">rlgym.utils.gamestates.physics_object.PhysicsObject</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.state_wrapper.PhysicsWrapper" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>phys_obj</strong> (<a class="reference internal" href="../../gamestates/physics_object/index.html#rlgym.utils.gamestates.physics_object.PhysicsObject" title="rlgym.utils.gamestates.physics_object.PhysicsObject"><em>rlgym.utils.gamestates.physics_object.PhysicsObject</em></a>) – </p>
-</dd>
-</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="rlgym.utils.state_setters.state_wrapper.PhysicsWrapper._read_from_physics_object">
-<span class="sig-name descname"><span class="pre">_read_from_physics_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">phys_obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.state_wrapper.PhysicsWrapper._read_from_physics_object" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">_read_from_physics_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">phys_obj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../gamestates/physics_object/index.html#rlgym.utils.gamestates.physics_object.PhysicsObject" title="rlgym.utils.gamestates.physics_object.PhysicsObject"><span class="pre">rlgym.utils.gamestates.physics_object.PhysicsObject</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.state_wrapper.PhysicsWrapper._read_from_physics_object" title="Permalink to this definition"></a></dt>
 <dd><p>A function to modify PhysicsWrapper values from values in a PhysicsObject object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>phys_obj</strong> (<a class="reference internal" href="../../gamestates/physics_object/index.html#rlgym.utils.gamestates.physics_object.PhysicsObject" title="rlgym.utils.gamestates.physics_object.PhysicsObject"><em>rlgym.utils.gamestates.physics_object.PhysicsObject</em></a>) – </p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rlgym.utils.state_setters.state_wrapper.PhysicsWrapper.set_pos">
-<span class="sig-name descname"><span class="pre">set_pos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.state_wrapper.PhysicsWrapper.set_pos" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">set_pos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.state_wrapper.PhysicsWrapper.set_pos" title="Permalink to this definition"></a></dt>
 <dd><p>Sets position.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> (<em>float</em>) – Float indicating x position value.</p></li>
-<li><p><strong>y</strong> (<em>float</em>) – Float indicating y position value.</p></li>
-<li><p><strong>z</strong> (<em>float</em>) – Float indicating z position value.</p></li>
+<li><p><strong>x</strong> – Float indicating x position value.</p></li>
+<li><p><strong>y</strong> – Float indicating y position value.</p></li>
+<li><p><strong>z</strong> – Float indicating z position value.</p></li>
 </ul>
 </dd>
 </dl>
@@ -214,14 +188,14 @@ These values are sent as a string to be applied to the game engine upon an envir
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rlgym.utils.state_setters.state_wrapper.PhysicsWrapper.set_lin_vel">
-<span class="sig-name descname"><span class="pre">set_lin_vel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.state_wrapper.PhysicsWrapper.set_lin_vel" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">set_lin_vel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.state_wrapper.PhysicsWrapper.set_lin_vel" title="Permalink to this definition"></a></dt>
 <dd><p>Sets linear velocity.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> (<em>float</em>) – Float indicating x velocity value.</p></li>
-<li><p><strong>y</strong> (<em>float</em>) – Float indicating y velocity value.</p></li>
-<li><p><strong>z</strong> (<em>float</em>) – Float indicating z velocity value.</p></li>
+<li><p><strong>x</strong> – Float indicating x velocity value.</p></li>
+<li><p><strong>y</strong> – Float indicating y velocity value.</p></li>
+<li><p><strong>z</strong> – Float indicating z velocity value.</p></li>
 </ul>
 </dd>
 </dl>
@@ -229,14 +203,14 @@ These values are sent as a string to be applied to the game engine upon an envir
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rlgym.utils.state_setters.state_wrapper.PhysicsWrapper.set_ang_vel">
-<span class="sig-name descname"><span class="pre">set_ang_vel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.state_wrapper.PhysicsWrapper.set_ang_vel" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">set_ang_vel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.state_wrapper.PhysicsWrapper.set_ang_vel" title="Permalink to this definition"></a></dt>
 <dd><p>Sets angular velocity.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> (<em>float</em>) – Float indicating x angular velocity value.</p></li>
-<li><p><strong>y</strong> (<em>float</em>) – Float indicating y angular velocity value.</p></li>
-<li><p><strong>z</strong> (<em>float</em>) – Float indicating z angular velocity value.</p></li>
+<li><p><strong>x</strong> – Float indicating x angular velocity value.</p></li>
+<li><p><strong>y</strong> – Float indicating y angular velocity value.</p></li>
+<li><p><strong>z</strong> – Float indicating z angular velocity value.</p></li>
 </ul>
 </dd>
 </dl>
@@ -244,14 +218,11 @@ These values are sent as a string to be applied to the game engine upon an envir
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rlgym.utils.state_setters.state_wrapper.PhysicsWrapper._encode">
-<span class="sig-name descname"><span class="pre">_encode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.state_wrapper.PhysicsWrapper._encode" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">_encode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#rlgym.utils.state_setters.state_wrapper.PhysicsWrapper._encode" title="Permalink to this definition"></a></dt>
 <dd><p>Function called by a StateWrapper to produce a state string.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>String containing value data.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>str</p>
 </dd>
 </dl>
 </dd></dl>
@@ -260,53 +231,27 @@ These values are sent as a string to be applied to the game engine upon an envir
 
 <dl class="py class">
 <dt class="sig sig-object py" id="rlgym.utils.state_setters.state_wrapper.CarWrapper">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rlgym.utils.state_setters.state_wrapper.</span></span><span class="sig-name descname"><span class="pre">CarWrapper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">team_num</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">player_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.state_wrapper.CarWrapper" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rlgym.utils.state_setters.state_wrapper.</span></span><span class="sig-name descname"><span class="pre">CarWrapper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">team_num</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">player_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../gamestates/player_data/index.html#rlgym.utils.gamestates.player_data.PlayerData" title="rlgym.utils.gamestates.player_data.PlayerData"><span class="pre">rlgym.utils.gamestates.player_data.PlayerData</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.state_wrapper.CarWrapper" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#rlgym.utils.state_setters.state_wrapper.PhysicsWrapper" title="rlgym.utils.state_setters.state_wrapper.PhysicsWrapper"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PhysicsWrapper</span></code></a></p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>team_num</strong> (<em>int</em>) – </p></li>
-<li><p><strong>id</strong> (<em>int</em>) – </p></li>
-<li><p><strong>player_data</strong> (<a class="reference internal" href="../../gamestates/player_data/index.html#rlgym.utils.gamestates.player_data.PlayerData" title="rlgym.utils.gamestates.player_data.PlayerData"><em>rlgym.utils.gamestates.player_data.PlayerData</em></a>) – </p></li>
-</ul>
-</dd>
-</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="rlgym.utils.state_setters.state_wrapper.CarWrapper._read_from_player_data">
-<span class="sig-name descname"><span class="pre">_read_from_player_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">player_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.state_wrapper.CarWrapper._read_from_player_data" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">_read_from_player_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">player_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../gamestates/player_data/index.html#rlgym.utils.gamestates.player_data.PlayerData" title="rlgym.utils.gamestates.player_data.PlayerData"><span class="pre">rlgym.utils.gamestates.player_data.PlayerData</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.state_wrapper.CarWrapper._read_from_player_data" title="Permalink to this definition"></a></dt>
 <dd><p>A function to modify CarWrapper values from values in a PlayerData object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>player_data</strong> (<a class="reference internal" href="../../gamestates/player_data/index.html#rlgym.utils.gamestates.player_data.PlayerData" title="rlgym.utils.gamestates.player_data.PlayerData"><em>rlgym.utils.gamestates.player_data.PlayerData</em></a>) – </p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rlgym.utils.state_setters.state_wrapper.CarWrapper.set_rot">
-<span class="sig-name descname"><span class="pre">set_rot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pitch</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yaw</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">roll</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.state_wrapper.CarWrapper.set_rot" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">set_rot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pitch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yaw</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">roll</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.state_wrapper.CarWrapper.set_rot" title="Permalink to this definition"></a></dt>
 <dd><p>Sets rotation in terms of euler angles.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>pitch</strong> (<em>float</em>) – </p></li>
-<li><p><strong>yaw</strong> (<em>float</em>) – </p></li>
-<li><p><strong>roll</strong> (<em>float</em>) – </p></li>
-</ul>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rlgym.utils.state_setters.state_wrapper.CarWrapper._encode">
-<span class="sig-name descname"><span class="pre">_encode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.state_wrapper.CarWrapper._encode" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">_encode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#rlgym.utils.state_setters.state_wrapper.CarWrapper._encode" title="Permalink to this definition"></a></dt>
 <dd><p>Function called by a StateWrapper to produce a state string.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>String containing value data.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>str</p>
 </dd>
 </dl>
 </dd></dl>

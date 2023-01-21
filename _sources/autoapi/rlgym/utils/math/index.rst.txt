@@ -58,18 +58,18 @@ Functions
 .. py:function:: quat_to_euler(quat)
 
 
-.. py:function:: quat_to_rot_mtx(quat)
+.. py:function:: quat_to_rot_mtx(quat: numpy.ndarray) -> numpy.ndarray
 
 
-.. py:function:: rotation_to_quaternion(m)
+.. py:function:: rotation_to_quaternion(m: numpy.ndarray) -> numpy.ndarray
 
 
 .. py:function:: euler_to_rotation(pyr)
 
 
-.. py:function:: rand_uvec3(rng = np.random)
+.. py:function:: rand_uvec3(rng: numpy.random.Generator = np.random)
 
 
-.. py:function:: rand_vec3(max_norm, rng = np.random)
+.. py:function:: rand_vec3(max_norm, rng: numpy.random.Generator = np.random)
 
 

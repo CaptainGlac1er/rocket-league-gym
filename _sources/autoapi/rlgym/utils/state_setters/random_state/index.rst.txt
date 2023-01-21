@@ -63,21 +63,21 @@ Attributes
 
    
 
-.. py:class:: RandomState(ball_rand_speed = False, cars_rand_speed = False, cars_on_ground = True)
+.. py:class:: RandomState(ball_rand_speed: bool = False, cars_rand_speed: bool = False, cars_on_ground: bool = True)
 
    Bases: :py:obj:`rlgym.utils.state_setters.StateSetter`
 
    Helper class that provides a standard way to create an ABC using
    inheritance.
 
-   .. py:method:: reset(state_wrapper)
+   .. py:method:: reset(state_wrapper: rlgym.utils.state_setters.StateWrapper)
 
       Modifies the StateWrapper to contain random values the ball and each car.
 
       :param state_wrapper: StateWrapper object to be modified with desired state values.
 
 
-   .. py:method:: _reset_ball_random(state_wrapper, random_speed)
+   .. py:method:: _reset_ball_random(state_wrapper: rlgym.utils.state_setters.StateWrapper, random_speed: bool)
 
       Function to set the ball to a random position.
 
@@ -85,7 +85,7 @@ Attributes
       :param random_speed: Boolean indicating whether to randomize velocity values.
 
 
-   .. py:method:: _reset_cars_random(state_wrapper, on_ground, random_speed)
+   .. py:method:: _reset_cars_random(state_wrapper: rlgym.utils.state_setters.StateWrapper, on_ground: bool, random_speed: bool)
 
       Function to set all cars to a random position.
 

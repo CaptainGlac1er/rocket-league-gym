@@ -29,7 +29,7 @@ Classes
    Helper class that provides a standard way to create an ABC using
    inheritance.
 
-   .. py:method:: get_action_space()
+   .. py:method:: get_action_space() -> gym.spaces.Space
       :abstractmethod:
 
       Function that returns the action space type. It will be called during the initialization of the environment.
@@ -37,7 +37,7 @@ Classes
       :return: The type of the action space
 
 
-   .. py:method:: parse_actions(actions, state)
+   .. py:method:: parse_actions(actions: Any, state: rlgym.utils.gamestates.GameState) -> numpy.ndarray
       :abstractmethod:
 
       Function that parses actions from the action space into a format that rlgym understands.

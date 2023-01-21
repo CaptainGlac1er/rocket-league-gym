@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>rlgym.utils.obs_builders.rhobot_obs &mdash; RLGym 2.0.1 documentation</title>
+  <title>rlgym.utils.obs_builders.rhobot_obs &mdash; RLGym  documentation</title>
       <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
@@ -124,7 +124,7 @@ constructed in the same way as every other observation.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rlgym.utils.obs_builders.rhobot_obs.RhobotObs.build_obs">
-<span class="sig-name descname"><span class="pre">build_obs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">player</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prev_action</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.obs_builders.rhobot_obs.RhobotObs.build_obs" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">build_obs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">player</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prev_action</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="headerlink" href="#rlgym.utils.obs_builders.rhobot_obs.RhobotObs.build_obs" title="Permalink to this definition"></a></dt>
 <dd><p>Function to build observations for a policy. This is where all observations will be constructed every step and
 every reset. This function is given a player argument, and it is expected that the observation returned by this
 function will contain information from the perspective of that player. This function is called once for each
@@ -132,9 +132,6 @@ agent automatically at every step.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>player</strong> – The player to build an observation for. The observation returned should be from the perspective of</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>numpy.ndarray</p>
 </dd>
 </dl>
 <p>this player.</p>
@@ -147,9 +144,6 @@ agent automatically at every step.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>An observation for the player provided.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>numpy.ndarray</p>
 </dd>
 </dl>
 </dd></dl>

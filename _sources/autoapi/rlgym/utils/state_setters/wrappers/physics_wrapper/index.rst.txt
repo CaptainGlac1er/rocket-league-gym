@@ -17,16 +17,16 @@ Classes
 
 
 
-.. py:class:: PhysicsWrapper(phys_obj = None)
+.. py:class:: PhysicsWrapper(phys_obj: rlgym.utils.gamestates.PhysicsObject = None)
 
    Bases: :py:obj:`object`
 
-   .. py:method:: _read_from_physics_object(phys_obj)
+   .. py:method:: _read_from_physics_object(phys_obj: rlgym.utils.gamestates.PhysicsObject)
 
       A function to modify PhysicsWrapper values from values in a PhysicsObject object.
 
 
-   .. py:method:: set_pos(x = None, y = None, z = None)
+   .. py:method:: set_pos(x: float = None, y: float = None, z: float = None)
 
       Sets position.
 
@@ -35,7 +35,7 @@ Classes
       :param z: Float indicating z position value.
 
 
-   .. py:method:: set_lin_vel(x = None, y = None, z = None)
+   .. py:method:: set_lin_vel(x: float = None, y: float = None, z: float = None)
 
       Sets linear velocity.
 
@@ -44,7 +44,7 @@ Classes
       :param z: Float indicating z velocity value.
 
 
-   .. py:method:: set_ang_vel(x = None, y = None, z = None)
+   .. py:method:: set_ang_vel(x: float = None, y: float = None, z: float = None)
 
       Sets angular velocity.
 
@@ -53,7 +53,7 @@ Classes
       :param z: Float indicating z angular velocity value.
 
 
-   .. py:method:: _encode()
+   .. py:method:: _encode() -> list
 
       Function called by a StateWrapper to produce a state string.
 

@@ -56,20 +56,20 @@ Classes
    .. py:method:: _setup_plugin_connection()
 
 
-   .. py:method:: _page_client()
+   .. py:method:: _page_client() -> bool
 
 
    .. py:method:: _minimize_game()
 
 
-   .. py:method:: reset(return_info=False)
+   .. py:method:: reset(return_info=False) -> Union[List, Tuple]
 
       The environment reset function. When called, this will reset the state of the environment and objects in the game.
       This should be called once when the environment is initialized, then every time the `done` flag from the `step()`
       function is `True`.
 
 
-   .. py:method:: step(actions)
+   .. py:method:: step(actions: Any) -> Tuple[List, List, bool, Dict]
 
       The step function will send the list of provided actions to the game, then advance the game forward by `tick_skip`
       physics ticks using that action. The game is then paused, and the current state is sent back to RLGym. This is
