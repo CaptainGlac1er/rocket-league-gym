@@ -1,0 +1,58 @@
+:py:mod:`rlgym.utils.state_setters.wrappers.state_wrapper`
+==========================================================
+
+.. py:module:: rlgym.utils.state_setters.wrappers.state_wrapper
+
+.. autoapi-nested-parse::
+
+   Data classes to permit the manipulation of environment variables.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   rlgym.utils.state_setters.wrappers.state_wrapper.StateWrapper
+
+
+
+
+.. py:class:: StateWrapper(blue_count = 0, orange_count = 0, game_state=None)
+
+   Bases: :py:obj:`object`
+
+   .. py:attribute:: BLUE_ID1
+      :value: 1
+
+      
+
+   .. py:attribute:: ORANGE_ID1
+      :value: 5
+
+      
+
+   .. py:method:: _read_from_gamestate(game_state)
+
+      A function to modify the StateWrapper with values read in from a GameState object.
+
+
+   .. py:method:: blue_cars()
+
+
+   .. py:method:: orange_cars()
+
+
+   .. py:method:: format_state()
+
+      A function to format the values stored within a StateWrapper object.
+      These values are sent as a string to be applied to the game engine upon an environment reset.
+
+      :return: String containing all state values.
+
+
+

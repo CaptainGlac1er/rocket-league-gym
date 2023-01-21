@@ -1,0 +1,52 @@
+:py:mod:`rlgym.utils.state_setters.default_state`
+=================================================
+
+.. py:module:: rlgym.utils.state_setters.default_state
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   rlgym.utils.state_setters.default_state.DefaultState
+
+
+
+
+.. py:class:: DefaultState
+
+   Bases: :py:obj:`rlgym.utils.state_setters.StateSetter`
+
+   Helper class that provides a standard way to create an ABC using
+   inheritance.
+
+   .. py:attribute:: SPAWN_BLUE_POS
+      :value: [None, None, None, None, None]
+
+      
+
+   .. py:attribute:: SPAWN_BLUE_YAW
+
+      
+
+   .. py:attribute:: SPAWN_ORANGE_POS
+      :value: [[2048, 2560, 17], None, [256, 3840, 17], None, [0, 4608, 17]]
+
+      
+
+   .. py:attribute:: SPAWN_ORANGE_YAW
+
+      
+
+   .. py:method:: reset(state_wrapper)
+
+      Modifies state_wrapper values to emulate a randomly selected default kickoff.
+
+      :param state_wrapper: StateWrapper object to be modified with desired state values.
+
+
+

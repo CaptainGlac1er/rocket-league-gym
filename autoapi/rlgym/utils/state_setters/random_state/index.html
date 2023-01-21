@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>rlgym.utils.state_setters.random_state &mdash; RLGym 2.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="rlgym.utils.state_setters.state_setter" href="../state_setter/index.html" />
+    <link rel="prev" title="rlgym.utils.state_setters.default_state" href="../default_state/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../index.html" class="icon icon-home"> RLGym
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../communication/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.communication</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../envs/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.envs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../gamelaunch/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.gamelaunch</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">RLGym</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.state_setters</span></code></a></li>
+      <li class="breadcrumb-item active"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.state_setters.random_state</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../_sources/autoapi/rlgym/utils/state_setters/random_state/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-rlgym.utils.state_setters.random_state">
+<span id="rlgym-utils-state-setters-random-state"></span><h1><a class="reference internal" href="#module-rlgym.utils.state_setters.random_state" title="rlgym.utils.state_setters.random_state"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.state_setters.random_state</span></code></a><a class="headerlink" href="#module-rlgym.utils.state_setters.random_state" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#rlgym.utils.state_setters.random_state.RandomState" title="rlgym.utils.state_setters.random_state.RandomState"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RandomState</span></code></a></p></td>
+<td><p>Helper class that provides a standard way to create an ABC using</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#rlgym.utils.state_setters.random_state.X_MAX" title="rlgym.utils.state_setters.random_state.X_MAX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">X_MAX</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#rlgym.utils.state_setters.random_state.Y_MAX" title="rlgym.utils.state_setters.random_state.Y_MAX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Y_MAX</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#rlgym.utils.state_setters.random_state.Z_MAX_BALL" title="rlgym.utils.state_setters.random_state.Z_MAX_BALL"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Z_MAX_BALL</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#rlgym.utils.state_setters.random_state.Z_MAX_CAR" title="rlgym.utils.state_setters.random_state.Z_MAX_CAR"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Z_MAX_CAR</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#rlgym.utils.state_setters.random_state.PITCH_MAX" title="rlgym.utils.state_setters.random_state.PITCH_MAX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PITCH_MAX</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#rlgym.utils.state_setters.random_state.YAW_MAX" title="rlgym.utils.state_setters.random_state.YAW_MAX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">YAW_MAX</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#rlgym.utils.state_setters.random_state.ROLL_MAX" title="rlgym.utils.state_setters.random_state.ROLL_MAX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ROLL_MAX</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="rlgym.utils.state_setters.random_state.X_MAX">
+<span class="sig-prename descclassname"><span class="pre">rlgym.utils.state_setters.random_state.</span></span><span class="sig-name descname"><span class="pre">X_MAX</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7000</span></em><a class="headerlink" href="#rlgym.utils.state_setters.random_state.X_MAX" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="rlgym.utils.state_setters.random_state.Y_MAX">
+<span class="sig-prename descclassname"><span class="pre">rlgym.utils.state_setters.random_state.</span></span><span class="sig-name descname"><span class="pre">Y_MAX</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">9000</span></em><a class="headerlink" href="#rlgym.utils.state_setters.random_state.Y_MAX" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="rlgym.utils.state_setters.random_state.Z_MAX_BALL">
+<span class="sig-prename descclassname"><span class="pre">rlgym.utils.state_setters.random_state.</span></span><span class="sig-name descname"><span class="pre">Z_MAX_BALL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1850</span></em><a class="headerlink" href="#rlgym.utils.state_setters.random_state.Z_MAX_BALL" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="rlgym.utils.state_setters.random_state.Z_MAX_CAR">
+<span class="sig-prename descclassname"><span class="pre">rlgym.utils.state_setters.random_state.</span></span><span class="sig-name descname"><span class="pre">Z_MAX_CAR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1900</span></em><a class="headerlink" href="#rlgym.utils.state_setters.random_state.Z_MAX_CAR" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="rlgym.utils.state_setters.random_state.PITCH_MAX">
+<span class="sig-prename descclassname"><span class="pre">rlgym.utils.state_setters.random_state.</span></span><span class="sig-name descname"><span class="pre">PITCH_MAX</span></span><a class="headerlink" href="#rlgym.utils.state_setters.random_state.PITCH_MAX" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="rlgym.utils.state_setters.random_state.YAW_MAX">
+<span class="sig-prename descclassname"><span class="pre">rlgym.utils.state_setters.random_state.</span></span><span class="sig-name descname"><span class="pre">YAW_MAX</span></span><a class="headerlink" href="#rlgym.utils.state_setters.random_state.YAW_MAX" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="rlgym.utils.state_setters.random_state.ROLL_MAX">
+<span class="sig-prename descclassname"><span class="pre">rlgym.utils.state_setters.random_state.</span></span><span class="sig-name descname"><span class="pre">ROLL_MAX</span></span><a class="headerlink" href="#rlgym.utils.state_setters.random_state.ROLL_MAX" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rlgym.utils.state_setters.random_state.RandomState">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rlgym.utils.state_setters.random_state.</span></span><span class="sig-name descname"><span class="pre">RandomState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ball_rand_speed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cars_rand_speed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cars_on_ground</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.random_state.RandomState" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../index.html#rlgym.utils.state_setters.StateSetter" title="rlgym.utils.state_setters.StateSetter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rlgym.utils.state_setters.StateSetter</span></code></a></p>
+<p>Helper class that provides a standard way to create an ABC using
+inheritance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ball_rand_speed</strong> (<em>bool</em>) – </p></li>
+<li><p><strong>cars_rand_speed</strong> (<em>bool</em>) – </p></li>
+<li><p><strong>cars_on_ground</strong> (<em>bool</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="rlgym.utils.state_setters.random_state.RandomState.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_wrapper</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.random_state.RandomState.reset" title="Permalink to this definition"></a></dt>
+<dd><p>Modifies the StateWrapper to contain random values the ball and each car.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>state_wrapper</strong> (<em>rlgym.utils.state_setters.StateWrapper</em>) – StateWrapper object to be modified with desired state values.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rlgym.utils.state_setters.random_state.RandomState._reset_ball_random">
+<span class="sig-name descname"><span class="pre">_reset_ball_random</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_wrapper</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_speed</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.random_state.RandomState._reset_ball_random" title="Permalink to this definition"></a></dt>
+<dd><p>Function to set the ball to a random position.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state_wrapper</strong> (<em>rlgym.utils.state_setters.StateWrapper</em>) – StateWrapper object to be modified.</p></li>
+<li><p><strong>random_speed</strong> (<em>bool</em>) – Boolean indicating whether to randomize velocity values.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rlgym.utils.state_setters.random_state.RandomState._reset_cars_random">
+<span class="sig-name descname"><span class="pre">_reset_cars_random</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_wrapper</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">on_ground</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_speed</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.state_setters.random_state.RandomState._reset_cars_random" title="Permalink to this definition"></a></dt>
+<dd><p>Function to set all cars to a random position.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state_wrapper</strong> (<em>rlgym.utils.state_setters.StateWrapper</em>) – StateWrapper object to be modified.</p></li>
+<li><p><strong>on_ground</strong> (<em>bool</em>) – Boolean indicating whether to place cars only on the ground.</p></li>
+<li><p><strong>random_speed</strong> (<em>bool</em>) – Boolean indicating whether to randomize velocity values.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../default_state/index.html" class="btn btn-neutral float-left" title="rlgym.utils.state_setters.default_state" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../state_setter/index.html" class="btn btn-neutral float-right" title="rlgym.utils.state_setters.state_setter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Lucas Emery &amp; Matthew Allen.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

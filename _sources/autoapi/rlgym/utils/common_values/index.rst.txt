@@ -1,0 +1,99 @@
+:py:mod:`rlgym.utils.common_values`
+===================================
+
+.. py:module:: rlgym.utils.common_values
+
+
+Module Contents
+---------------
+
+.. py:data:: SIDE_WALL_X
+   :value: 4096
+
+   
+
+.. py:data:: BACK_WALL_Y
+   :value: 5120
+
+   
+
+.. py:data:: CEILING_Z
+   :value: 2044
+
+   
+
+.. py:data:: BACK_NET_Y
+   :value: 6000
+
+   
+
+.. py:data:: GOAL_HEIGHT
+   :value: 642.775
+
+   
+
+.. py:data:: ORANGE_GOAL_CENTER
+   :value: (0,)
+
+   
+
+.. py:data:: BLUE_GOAL_CENTER
+   :value: (0,)
+
+   
+
+.. py:data:: ORANGE_GOAL_BACK
+   :value: (0,)
+
+   
+
+.. py:data:: BLUE_GOAL_BACK
+   :value: (0,)
+
+   
+
+.. py:data:: BALL_RADIUS
+   :value: 92.75
+
+   
+
+.. py:data:: BALL_MAX_SPEED
+   :value: 6000
+
+   
+
+.. py:data:: CAR_MAX_SPEED
+   :value: 2300
+
+   
+
+.. py:data:: SUPERSONIC_THRESHOLD
+   :value: 2200
+
+   
+
+.. py:data:: CAR_MAX_ANG_VEL
+   :value: 5.5
+
+   
+
+.. py:data:: BLUE_TEAM
+   :value: 0
+
+   
+
+.. py:data:: ORANGE_TEAM
+   :value: 1
+
+   
+
+.. py:data:: NUM_ACTIONS
+   :value: 8
+
+   
+
+.. py:data:: BOOST_LOCATIONS
+   :value: ((0.0,), (), (1792.0,), (), (3072.0,), (), (940.0,), (0.0,), (), (3584.0,), (), (1788.0,), (),...
+
+   
+

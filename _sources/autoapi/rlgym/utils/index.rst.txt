@@ -1,0 +1,235 @@
+:py:mod:`rlgym.utils`
+=====================
+
+.. py:module:: rlgym.utils
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   action_parsers/index.rst
+   gamestates/index.rst
+   obs_builders/index.rst
+   reward_functions/index.rst
+   state_setters/index.rst
+   terminal_conditions/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   common_values/index.rst
+   math/index.rst
+
+
+Package Contents
+----------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   rlgym.utils.TerminalCondition
+   rlgym.utils.RewardFunction
+   rlgym.utils.ObsBuilder
+   rlgym.utils.StateSetter
+   rlgym.utils.ActionParser
+
+
+
+
+.. py:class:: TerminalCondition
+
+   Bases: :py:obj:`abc.ABC`
+
+   Helper class that provides a standard way to create an ABC using
+   inheritance.
+
+   .. py:method:: reset(initial_state)
+      :abstractmethod:
+
+      Function to be called each time the environment is reset.
+
+      :param initial_state: The initial state of the reset environment.
+
+
+   .. py:method:: is_terminal(current_state)
+      :abstractmethod:
+
+      Function to determine if a game state is terminal. This will be called once per step, and must return either
+      `True` or `False` if the current episode should be terminated at this state.
+
+      :param current_state: The current state of the game.
+
+      :return: Bool representing whether the current state is a terminal one.
+
+
+
+.. py:class:: RewardFunction
+
+   Bases: :py:obj:`abc.ABC`
+
+   Helper class that provides a standard way to create an ABC using
+   inheritance.
+
+   .. py:method:: reset(initial_state)
+      :abstractmethod:
+
+      Function to be called each time the environment is reset. This is meant to enable users to design stateful reward
+      functions that maintain information about the game throughout an episode to determine a reward.
+
+      :param initial_state: The initial state of the reset environment.
+
+
+   .. py:method:: pre_step(state)
+
+      Function to pre-compute values each step. This function is called only once each step, before get_reward is
+      called for each player.
+
+      :param state: The current state of the game.
+
+
+   .. py:method:: get_reward(player, state, previous_action)
+      :abstractmethod:
+
+      Function to compute the reward for a player. This function is given a player argument, and it is expected that
+      the reward returned by this function will be for that player.
+
+      :param player: Player to compute the reward for.
+      :param state: The current state of the game.
+      :param previous_action: The action taken at the previous environment step.
+
+      :return: A reward for the player provided.
+
+
+   .. py:method:: get_final_reward(player, state, previous_action)
+
+      Function to compute the reward for a player at the final step of an episode. This will be called only once, when
+      it is determined that the current state is a terminal one. This may be useful for sparse reward signals that only
+      produce a value at the final step of an environment. By default, the regular get_reward is used.
+
+      :param player: Player to compute the reward for.
+      :param state: The current state of the game.
+      :param previous_action: The action taken at the previous environment step.
+
+      :return: A reward for the player provided.
+
+
+
+.. py:class:: ObsBuilder
+
+   Bases: :py:obj:`abc.ABC`
+
+   Helper class that provides a standard way to create an ABC using
+   inheritance.
+
+   .. py:method:: get_obs_space()
+
+      Function that returns the observation space type. It will be called during the initialization of the environment.
+
+      :return: The type of the observation space
+
+
+   .. py:method:: reset(initial_state)
+      :abstractmethod:
+
+      Function to be called each time the environment is reset. Note that this does not need to return anything,
+      the environment will call `build_obs` automatically after reset, so the initial observation for a policy will be
+      constructed in the same way as every other observation.
+
+      :param initial_state: The initial game state of the reset environment.
+
+
+   .. py:method:: pre_step(state)
+
+      Function to pre-compute values each step. This function is called only once each step, before build_obs is
+      called for each player.
+
+      :param state: The current state of the game.
+
+
+   .. py:method:: build_obs(player, state, previous_action)
+      :abstractmethod:
+
+      Function to build observations for a policy. This is where all observations will be constructed every step and
+      every reset. This function is given a player argument, and it is expected that the observation returned by this
+      function will contain information from the perspective of that player. This function is called once for each
+      agent automatically at every step.
+
+      :param player: The player to build an observation for. The observation returned should be from the perspective of
+      this player.
+
+      :param state: The current state of the game.
+      :param previous_action: The action taken at the previous environment step.
+
+      :return: An observation for the player provided.
+
+
+
+.. py:class:: StateSetter
+
+   Bases: :py:obj:`abc.ABC`
+
+   Helper class that provides a standard way to create an ABC using
+   inheritance.
+
+   .. py:method:: build_wrapper(max_team_size, spawn_opponents)
+
+      Function to be called each time the environment is reset.
+
+      :param max_team_size: The maximum supported team size in the current rlgym instance.
+      :param spawn_opponents: If the user expects agents in the orange side or not, only provided for backwards compatibility.
+
+      :returns: The StateWrapper object that will be received in StateSetter.reset(), any team shapes are supported as
+      long as team size is smaller or equal to max_team_size
+
+
+   .. py:method:: reset(state_wrapper)
+      :abstractmethod:
+
+      Function to be called each time the environment is reset.
+
+      :param state_wrapper: StateWrapper object to be modified with desired state values.
+
+      NOTE: This function should change any desired values of the StateWrapper, which are all defaulted to 0.
+      The values within StateWrapper are sent to the game each time the match is reset.
+
+
+
+.. py:class:: ActionParser
+
+   Bases: :py:obj:`abc.ABC`
+
+   Helper class that provides a standard way to create an ABC using
+   inheritance.
+
+   .. py:method:: get_action_space()
+      :abstractmethod:
+
+      Function that returns the action space type. It will be called during the initialization of the environment.
+
+      :return: The type of the action space
+
+
+   .. py:method:: parse_actions(actions, state)
+      :abstractmethod:
+
+      Function that parses actions from the action space into a format that rlgym understands.
+      The expected return value is a numpy float array of size (n, 8) where n is the number of agents.
+      The second dimension is indexed as follows: throttle, steer, yaw, pitch, roll, jump, boost, handbrake.
+      The first five values are expected to be in the range [-1, 1], while the last three values should be either 0 or 1.
+
+      :param actions: An object of actions, as passed to the `env.step` function.
+      :param state: The GameState object of the current state that were used to generate the actions.
+
+      :return: the parsed actions in the rlgym format.
+
+
+

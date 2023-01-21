@@ -1,0 +1,54 @@
+:py:mod:`rlgym.utils.state_setters.state_setter`
+================================================
+
+.. py:module:: rlgym.utils.state_setters.state_setter
+
+.. autoapi-nested-parse::
+
+   Base state setter class.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   rlgym.utils.state_setters.state_setter.StateSetter
+
+
+
+
+.. py:class:: StateSetter
+
+   Bases: :py:obj:`abc.ABC`
+
+   Helper class that provides a standard way to create an ABC using
+   inheritance.
+
+   .. py:method:: build_wrapper(max_team_size, spawn_opponents)
+
+      Function to be called each time the environment is reset.
+
+      :param max_team_size: The maximum supported team size in the current rlgym instance.
+      :param spawn_opponents: If the user expects agents in the orange side or not, only provided for backwards compatibility.
+
+      :returns: The StateWrapper object that will be received in StateSetter.reset(), any team shapes are supported as
+      long as team size is smaller or equal to max_team_size
+
+
+   .. py:method:: reset(state_wrapper)
+      :abstractmethod:
+
+      Function to be called each time the environment is reset.
+
+      :param state_wrapper: StateWrapper object to be modified with desired state values.
+
+      NOTE: This function should change any desired values of the StateWrapper, which are all defaulted to 0.
+      The values within StateWrapper are sent to the game each time the match is reset.
+
+
+

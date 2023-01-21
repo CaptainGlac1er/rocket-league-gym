@@ -1,0 +1,1019 @@
+:py:mod:`rlgym.utils.reward_functions.common_rewards`
+=====================================================
+
+.. py:module:: rlgym.utils.reward_functions.common_rewards
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   ball_goal_rewards/index.rst
+   conditional_rewards/index.rst
+   misc_rewards/index.rst
+   player_ball_rewards/index.rst
+
+
+Package Contents
+----------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   rlgym.utils.reward_functions.common_rewards.RewardFunction
+   rlgym.utils.reward_functions.common_rewards.GameState
+   rlgym.utils.reward_functions.common_rewards.PlayerData
+   rlgym.utils.reward_functions.common_rewards.LiuDistanceBallToGoalReward
+   rlgym.utils.reward_functions.common_rewards.VelocityBallToGoalReward
+   rlgym.utils.reward_functions.common_rewards.BallYCoordinateReward
+   rlgym.utils.reward_functions.common_rewards.RewardFunction
+   rlgym.utils.reward_functions.common_rewards.PlayerData
+   rlgym.utils.reward_functions.common_rewards.GameState
+   rlgym.utils.reward_functions.common_rewards.ConditionalRewardFunction
+   rlgym.utils.reward_functions.common_rewards.RewardIfClosestToBall
+   rlgym.utils.reward_functions.common_rewards.RewardIfTouchedLast
+   rlgym.utils.reward_functions.common_rewards.RewardIfBehindBall
+   rlgym.utils.reward_functions.common_rewards.GameState
+   rlgym.utils.reward_functions.common_rewards.PlayerData
+   rlgym.utils.reward_functions.common_rewards.RewardFunction
+   rlgym.utils.reward_functions.common_rewards.EventReward
+   rlgym.utils.reward_functions.common_rewards.VelocityReward
+   rlgym.utils.reward_functions.common_rewards.SaveBoostReward
+   rlgym.utils.reward_functions.common_rewards.ConstantReward
+   rlgym.utils.reward_functions.common_rewards.AlignBallGoal
+   rlgym.utils.reward_functions.common_rewards.RewardFunction
+   rlgym.utils.reward_functions.common_rewards.GameState
+   rlgym.utils.reward_functions.common_rewards.PlayerData
+   rlgym.utils.reward_functions.common_rewards.LiuDistancePlayerToBallReward
+   rlgym.utils.reward_functions.common_rewards.VelocityPlayerToBallReward
+   rlgym.utils.reward_functions.common_rewards.FaceBallReward
+   rlgym.utils.reward_functions.common_rewards.TouchBallReward
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   rlgym.utils.reward_functions.common_rewards.BLUE_TEAM
+   rlgym.utils.reward_functions.common_rewards.ORANGE_TEAM
+   rlgym.utils.reward_functions.common_rewards.ORANGE_GOAL_BACK
+   rlgym.utils.reward_functions.common_rewards.BLUE_GOAL_BACK
+   rlgym.utils.reward_functions.common_rewards.BALL_MAX_SPEED
+   rlgym.utils.reward_functions.common_rewards.BACK_WALL_Y
+   rlgym.utils.reward_functions.common_rewards.BALL_RADIUS
+   rlgym.utils.reward_functions.common_rewards.BACK_NET_Y
+   rlgym.utils.reward_functions.common_rewards.BLUE_TEAM
+   rlgym.utils.reward_functions.common_rewards.ORANGE_TEAM
+   rlgym.utils.reward_functions.common_rewards.BLUE_TEAM
+   rlgym.utils.reward_functions.common_rewards.BLUE_GOAL_BACK
+   rlgym.utils.reward_functions.common_rewards.ORANGE_GOAL_BACK
+   rlgym.utils.reward_functions.common_rewards.ORANGE_TEAM
+   rlgym.utils.reward_functions.common_rewards.BALL_MAX_SPEED
+   rlgym.utils.reward_functions.common_rewards.CAR_MAX_SPEED
+   rlgym.utils.reward_functions.common_rewards.BALL_RADIUS
+   rlgym.utils.reward_functions.common_rewards.CAR_MAX_SPEED
+
+
+.. py:class:: RewardFunction
+
+   Bases: :py:obj:`abc.ABC`
+
+   Helper class that provides a standard way to create an ABC using
+   inheritance.
+
+   .. py:method:: reset(initial_state)
+      :abstractmethod:
+
+      Function to be called each time the environment is reset. This is meant to enable users to design stateful reward
+      functions that maintain information about the game throughout an episode to determine a reward.
+
+      :param initial_state: The initial state of the reset environment.
+
+
+   .. py:method:: pre_step(state)
+
+      Function to pre-compute values each step. This function is called only once each step, before get_reward is
+      called for each player.
+
+      :param state: The current state of the game.
+
+
+   .. py:method:: get_reward(player, state, previous_action)
+      :abstractmethod:
+
+      Function to compute the reward for a player. This function is given a player argument, and it is expected that
+      the reward returned by this function will be for that player.
+
+      :param player: Player to compute the reward for.
+      :param state: The current state of the game.
+      :param previous_action: The action taken at the previous environment step.
+
+      :return: A reward for the player provided.
+
+
+   .. py:method:: get_final_reward(player, state, previous_action)
+
+      Function to compute the reward for a player at the final step of an episode. This will be called only once, when
+      it is determined that the current state is a terminal one. This may be useful for sparse reward signals that only
+      produce a value at the final step of an environment. By default, the regular get_reward is used.
+
+      :param player: Player to compute the reward for.
+      :param state: The current state of the game.
+      :param previous_action: The action taken at the previous environment step.
+
+      :return: A reward for the player provided.
+
+
+
+.. py:data:: BLUE_TEAM
+   :value: 0
+
+   
+
+.. py:data:: ORANGE_TEAM
+   :value: 1
+
+   
+
+.. py:data:: ORANGE_GOAL_BACK
+   :value: (0,)
+
+   
+
+.. py:data:: BLUE_GOAL_BACK
+   :value: (0,)
+
+   
+
+.. py:data:: BALL_MAX_SPEED
+   :value: 6000
+
+   
+
+.. py:data:: BACK_WALL_Y
+   :value: 5120
+
+   
+
+.. py:data:: BALL_RADIUS
+   :value: 92.75
+
+   
+
+.. py:data:: BACK_NET_Y
+   :value: 6000
+
+   
+
+.. py:class:: GameState(state_floats = None)
+
+   Bases: :py:obj:`object`
+
+   .. py:attribute:: BOOST_PADS_LENGTH
+      :value: 34
+
+      
+
+   .. py:attribute:: BALL_STATE_LENGTH
+      :value: 18
+
+      
+
+   .. py:attribute:: PLAYER_CAR_STATE_LENGTH
+      :value: 13
+
+      
+
+   .. py:attribute:: PLAYER_TERTIARY_INFO_LENGTH
+      :value: 11
+
+      
+
+   .. py:attribute:: PLAYER_INFO_LENGTH
+
+      
+
+   .. py:method:: decode(state_floats)
+
+      Decode a string containing the current game state from the Bakkesmod plugin.
+      :param state_floats: String containing the game state.
+
+
+   .. py:method:: _decode(state_vals)
+
+
+   .. py:method:: _decode_player(full_player_data)
+
+
+   .. py:method:: __str__()
+
+      Return str(self).
+
+
+
+.. py:class:: PlayerData
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: __str__()
+
+      Return str(self).
+
+
+
+.. py:class:: LiuDistanceBallToGoalReward(own_goal=False)
+
+   Bases: :py:obj:`rlgym.utils.RewardFunction`
+
+   Helper class that provides a standard way to create an ABC using
+   inheritance.
+
+   .. py:method:: reset(initial_state)
+
+      Function to be called each time the environment is reset. This is meant to enable users to design stateful reward
+      functions that maintain information about the game throughout an episode to determine a reward.
+
+      :param initial_state: The initial state of the reset environment.
+
+
+   .. py:method:: get_reward(player, state, previous_action)
+
+      Function to compute the reward for a player. This function is given a player argument, and it is expected that
+      the reward returned by this function will be for that player.
+
+      :param player: Player to compute the reward for.
+      :param state: The current state of the game.
+      :param previous_action: The action taken at the previous environment step.
+
+      :return: A reward for the player provided.
+
+
+
+.. py:class:: VelocityBallToGoalReward(own_goal=False, use_scalar_projection=False)
+
+   Bases: :py:obj:`rlgym.utils.RewardFunction`
+
+   Helper class that provides a standard way to create an ABC using
+   inheritance.
+
+   .. py:method:: reset(initial_state)
+
+      Function to be called each time the environment is reset. This is meant to enable users to design stateful reward
+      functions that maintain information about the game throughout an episode to determine a reward.
+
+      :param initial_state: The initial state of the reset environment.
+
+
+   .. py:method:: get_reward(player, state, previous_action)
+
+      Function to compute the reward for a player. This function is given a player argument, and it is expected that
+      the reward returned by this function will be for that player.
+
+      :param player: Player to compute the reward for.
+      :param state: The current state of the game.
+      :param previous_action: The action taken at the previous environment step.
+
+      :return: A reward for the player provided.
+
+
+
+.. py:class:: BallYCoordinateReward(exponent=1)
+
+   Bases: :py:obj:`rlgym.utils.RewardFunction`
+
+   Helper class that provides a standard way to create an ABC using
+   inheritance.
+
+   .. py:method:: reset(initial_state)
+
+      Function to be called each time the environment is reset. This is meant to enable users to design stateful reward
+      functions that maintain information about the game throughout an episode to determine a reward.
+
+      :param initial_state: The initial state of the reset environment.
+
+
+   .. py:method:: get_reward(player, state, previous_action)
+
+      Function to compute the reward for a player. This function is given a player argument, and it is expected that
+      the reward returned by this function will be for that player.
+
+      :param player: Player to compute the reward for.
+      :param state: The current state of the game.
+      :param previous_action: The action taken at the previous environment step.
+
+      :return: A reward for the player provided.
+
+
+
+.. py:class:: RewardFunction
+
+   Bases: :py:obj:`abc.ABC`
+
+   Helper class that provides a standard way to create an ABC using
+   inheritance.
+
+   .. py:method:: reset(initial_state)
+      :abstractmethod:
+
+      Function to be called each time the environment is reset. This is meant to enable users to design stateful reward
+      functions that maintain information about the game throughout an episode to determine a reward.
+
+      :param initial_state: The initial state of the reset environment.
+
+
+   .. py:method:: pre_step(state)
+
+      Function to pre-compute values each step. This function is called only once each step, before get_reward is
+      called for each player.
+
+      :param state: The current state of the game.
+
+
+   .. py:method:: get_reward(player, state, previous_action)
+      :abstractmethod:
+
+      Function to compute the reward for a player. This function is given a player argument, and it is expected that
+      the reward returned by this function will be for that player.
+
+      :param player: Player to compute the reward for.
+      :param state: The current state of the game.
+      :param previous_action: The action taken at the previous environment step.
+
+      :return: A reward for the player provided.
+
+
+   .. py:method:: get_final_reward(player, state, previous_action)
+
+      Function to compute the reward for a player at the final step of an episode. This will be called only once, when
+      it is determined that the current state is a terminal one. This may be useful for sparse reward signals that only
+      produce a value at the final step of an environment. By default, the regular get_reward is used.
+
+      :param player: Player to compute the reward for.
+      :param state: The current state of the game.
+      :param previous_action: The action taken at the previous environment step.
+
+      :return: A reward for the player provided.
+
+
+
+.. py:data:: BLUE_TEAM
+   :value: 0
+
+   
+
+.. py:data:: ORANGE_TEAM
+   :value: 1
+
+   
+
+.. py:class:: PlayerData
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: __str__()
+
+      Return str(self).
+
+
+
+.. py:class:: GameState(state_floats = None)
+
+   Bases: :py:obj:`object`
+
+   .. py:attribute:: BOOST_PADS_LENGTH
+      :value: 34
+
+      
+
+   .. py:attribute:: BALL_STATE_LENGTH
+      :value: 18
+
+      
+
+   .. py:attribute:: PLAYER_CAR_STATE_LENGTH
+      :value: 13
+
+      
+
+   .. py:attribute:: PLAYER_TERTIARY_INFO_LENGTH
+      :value: 11
+
+      
+
+   .. py:attribute:: PLAYER_INFO_LENGTH
+
+      
+
+   .. py:method:: decode(state_floats)
+
+      Decode a string containing the current game state from the Bakkesmod plugin.
+      :param state_floats: String containing the game state.
+
+
+   .. py:method:: _decode(state_vals)
+
+
+   .. py:method:: _decode_player(full_player_data)
+
+
+   .. py:method:: __str__()
+
+      Return str(self).
+
+
+
+.. py:class:: ConditionalRewardFunction(reward_func)
+
+   Bases: :py:obj:`rlgym.utils.RewardFunction`
+
+   Helper class that provides a standard way to create an ABC using
+   inheritance.
+
+   .. py:method:: condition(player, state, previous_action)
+      :abstractmethod:
+
+
+   .. py:method:: reset(initial_state)
+
+      Function to be called each time the environment is reset. This is meant to enable users to design stateful reward
+      functions that maintain information about the game throughout an episode to determine a reward.
+
+      :param initial_state: The initial state of the reset environment.
+
+
+   .. py:method:: get_reward(player, state, previous_action)
+
+      Function to compute the reward for a player. This function is given a player argument, and it is expected that
+      the reward returned by this function will be for that player.
+
+      :param player: Player to compute the reward for.
+      :param state: The current state of the game.
+      :param previous_action: The action taken at the previous environment step.
+
+      :return: A reward for the player provided.
+
+
+   .. py:method:: get_final_reward(player, state, previous_action)
+
+      Function to compute the reward for a player at the final step of an episode. This will be called only once, when
+      it is determined that the current state is a terminal one. This may be useful for sparse reward signals that only
+      produce a value at the final step of an environment. By default, the regular get_reward is used.
+
+      :param player: Player to compute the reward for.
+      :param state: The current state of the game.
+      :param previous_action: The action taken at the previous environment step.
+
+      :return: A reward for the player provided.
+
+
+
+.. py:class:: RewardIfClosestToBall(reward_func, team_only=True)
+
+   Bases: :py:obj:`ConditionalRewardFunction`
+
+   Helper class that provides a standard way to create an ABC using
+   inheritance.
+
+   .. py:method:: condition(player, state, previous_action)
+
+
+
+.. py:class:: RewardIfTouchedLast(reward_func)
+
+   Bases: :py:obj:`ConditionalRewardFunction`
+
+   Helper class that provides a standard way to create an ABC using
+   inheritance.
+
+   .. py:method:: condition(player, state, previous_action)
+
+
+
+.. py:class:: RewardIfBehindBall(reward_func)
+
+   Bases: :py:obj:`ConditionalRewardFunction`
+
+   Helper class that provides a standard way to create an ABC using
+   inheritance.
+
+   .. py:method:: condition(player, state, previous_action)
+
+
+
+.. py:data:: BLUE_TEAM
+   :value: 0
+
+   
+
+.. py:data:: BLUE_GOAL_BACK
+   :value: (0,)
+
+   
+
+.. py:data:: ORANGE_GOAL_BACK
+   :value: (0,)
+
+   
+
+.. py:data:: ORANGE_TEAM
+   :value: 1
+
+   
+
+.. py:data:: BALL_MAX_SPEED
+   :value: 6000
+
+   
+
+.. py:data:: CAR_MAX_SPEED
+   :value: 2300
+
+   
+
+.. py:class:: GameState(state_floats = None)
+
+   Bases: :py:obj:`object`
+
+   .. py:attribute:: BOOST_PADS_LENGTH
+      :value: 34
+
+      
+
+   .. py:attribute:: BALL_STATE_LENGTH
+      :value: 18
+
+      
+
+   .. py:attribute:: PLAYER_CAR_STATE_LENGTH
+      :value: 13
+
+      
+
+   .. py:attribute:: PLAYER_TERTIARY_INFO_LENGTH
+      :value: 11
+
+      
+
+   .. py:attribute:: PLAYER_INFO_LENGTH
+
+      
+
+   .. py:method:: decode(state_floats)
+
+      Decode a string containing the current game state from the Bakkesmod plugin.
+      :param state_floats: String containing the game state.
+
+
+   .. py:method:: _decode(state_vals)
+
+
+   .. py:method:: _decode_player(full_player_data)
+
+
+   .. py:method:: __str__()
+
+      Return str(self).
+
+
+
+.. py:class:: PlayerData
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: __str__()
+
+      Return str(self).
+
+
+
+.. py:class:: RewardFunction
+
+   Bases: :py:obj:`abc.ABC`
+
+   Helper class that provides a standard way to create an ABC using
+   inheritance.
+
+   .. py:method:: reset(initial_state)
+      :abstractmethod:
+
+      Function to be called each time the environment is reset. This is meant to enable users to design stateful reward
+      functions that maintain information about the game throughout an episode to determine a reward.
+
+      :param initial_state: The initial state of the reset environment.
+
+
+   .. py:method:: pre_step(state)
+
+      Function to pre-compute values each step. This function is called only once each step, before get_reward is
+      called for each player.
+
+      :param state: The current state of the game.
+
+
+   .. py:method:: get_reward(player, state, previous_action)
+      :abstractmethod:
+
+      Function to compute the reward for a player. This function is given a player argument, and it is expected that
+      the reward returned by this function will be for that player.
+
+      :param player: Player to compute the reward for.
+      :param state: The current state of the game.
+      :param previous_action: The action taken at the previous environment step.
+
+      :return: A reward for the player provided.
+
+
+   .. py:method:: get_final_reward(player, state, previous_action)
+
+      Function to compute the reward for a player at the final step of an episode. This will be called only once, when
+      it is determined that the current state is a terminal one. This may be useful for sparse reward signals that only
+      produce a value at the final step of an environment. By default, the regular get_reward is used.
+
+      :param player: Player to compute the reward for.
+      :param state: The current state of the game.
+      :param previous_action: The action taken at the previous environment step.
+
+      :return: A reward for the player provided.
+
+
+
+.. py:class:: EventReward(goal=0.0, team_goal=0.0, concede=-0.0, touch=0.0, shot=0.0, save=0.0, demo=0.0, boost_pickup=0.0)
+
+   Bases: :py:obj:`rlgym.utils.reward_functions.RewardFunction`
+
+   Helper class that provides a standard way to create an ABC using
+   inheritance.
+
+   .. py:method:: _extract_values(player, state)
+      :staticmethod:
+
+
+   .. py:method:: reset(initial_state, optional_data=None)
+
+      Function to be called each time the environment is reset. This is meant to enable users to design stateful reward
+      functions that maintain information about the game throughout an episode to determine a reward.
+
+      :param initial_state: The initial state of the reset environment.
+
+
+   .. py:method:: get_reward(player, state, previous_action, optional_data=None)
+
+      Function to compute the reward for a player. This function is given a player argument, and it is expected that
+      the reward returned by this function will be for that player.
+
+      :param player: Player to compute the reward for.
+      :param state: The current state of the game.
+      :param previous_action: The action taken at the previous environment step.
+
+      :return: A reward for the player provided.
+
+
+
+.. py:class:: VelocityReward(negative=False)
+
+   Bases: :py:obj:`rlgym.utils.reward_functions.RewardFunction`
+
+   Helper class that provides a standard way to create an ABC using
+   inheritance.
+
+   .. py:method:: reset(initial_state)
+
+      Function to be called each time the environment is reset. This is meant to enable users to design stateful reward
+      functions that maintain information about the game throughout an episode to determine a reward.
+
+      :param initial_state: The initial state of the reset environment.
+
+
+   .. py:method:: get_reward(player, state, previous_action)
+
+      Function to compute the reward for a player. This function is given a player argument, and it is expected that
+      the reward returned by this function will be for that player.
+
+      :param player: Player to compute the reward for.
+      :param state: The current state of the game.
+      :param previous_action: The action taken at the previous environment step.
+
+      :return: A reward for the player provided.
+
+
+
+.. py:class:: SaveBoostReward
+
+   Bases: :py:obj:`rlgym.utils.reward_functions.RewardFunction`
+
+   Helper class that provides a standard way to create an ABC using
+   inheritance.
+
+   .. py:method:: reset(initial_state)
+
+      Function to be called each time the environment is reset. This is meant to enable users to design stateful reward
+      functions that maintain information about the game throughout an episode to determine a reward.
+
+      :param initial_state: The initial state of the reset environment.
+
+
+   .. py:method:: get_reward(player, state, previous_action)
+
+      Function to compute the reward for a player. This function is given a player argument, and it is expected that
+      the reward returned by this function will be for that player.
+
+      :param player: Player to compute the reward for.
+      :param state: The current state of the game.
+      :param previous_action: The action taken at the previous environment step.
+
+      :return: A reward for the player provided.
+
+
+
+.. py:class:: ConstantReward
+
+   Bases: :py:obj:`rlgym.utils.reward_functions.RewardFunction`
+
+   Helper class that provides a standard way to create an ABC using
+   inheritance.
+
+   .. py:method:: reset(initial_state)
+
+      Function to be called each time the environment is reset. This is meant to enable users to design stateful reward
+      functions that maintain information about the game throughout an episode to determine a reward.
+
+      :param initial_state: The initial state of the reset environment.
+
+
+   .. py:method:: get_reward(player, state, previous_action)
+
+      Function to compute the reward for a player. This function is given a player argument, and it is expected that
+      the reward returned by this function will be for that player.
+
+      :param player: Player to compute the reward for.
+      :param state: The current state of the game.
+      :param previous_action: The action taken at the previous environment step.
+
+      :return: A reward for the player provided.
+
+
+
+.. py:class:: AlignBallGoal(defense=1.0, offense=1.0)
+
+   Bases: :py:obj:`rlgym.utils.reward_functions.RewardFunction`
+
+   Helper class that provides a standard way to create an ABC using
+   inheritance.
+
+   .. py:method:: reset(initial_state)
+
+      Function to be called each time the environment is reset. This is meant to enable users to design stateful reward
+      functions that maintain information about the game throughout an episode to determine a reward.
+
+      :param initial_state: The initial state of the reset environment.
+
+
+   .. py:method:: get_reward(player, state, previous_action)
+
+      Function to compute the reward for a player. This function is given a player argument, and it is expected that
+      the reward returned by this function will be for that player.
+
+      :param player: Player to compute the reward for.
+      :param state: The current state of the game.
+      :param previous_action: The action taken at the previous environment step.
+
+      :return: A reward for the player provided.
+
+
+
+.. py:class:: RewardFunction
+
+   Bases: :py:obj:`abc.ABC`
+
+   Helper class that provides a standard way to create an ABC using
+   inheritance.
+
+   .. py:method:: reset(initial_state)
+      :abstractmethod:
+
+      Function to be called each time the environment is reset. This is meant to enable users to design stateful reward
+      functions that maintain information about the game throughout an episode to determine a reward.
+
+      :param initial_state: The initial state of the reset environment.
+
+
+   .. py:method:: pre_step(state)
+
+      Function to pre-compute values each step. This function is called only once each step, before get_reward is
+      called for each player.
+
+      :param state: The current state of the game.
+
+
+   .. py:method:: get_reward(player, state, previous_action)
+      :abstractmethod:
+
+      Function to compute the reward for a player. This function is given a player argument, and it is expected that
+      the reward returned by this function will be for that player.
+
+      :param player: Player to compute the reward for.
+      :param state: The current state of the game.
+      :param previous_action: The action taken at the previous environment step.
+
+      :return: A reward for the player provided.
+
+
+   .. py:method:: get_final_reward(player, state, previous_action)
+
+      Function to compute the reward for a player at the final step of an episode. This will be called only once, when
+      it is determined that the current state is a terminal one. This may be useful for sparse reward signals that only
+      produce a value at the final step of an environment. By default, the regular get_reward is used.
+
+      :param player: Player to compute the reward for.
+      :param state: The current state of the game.
+      :param previous_action: The action taken at the previous environment step.
+
+      :return: A reward for the player provided.
+
+
+
+.. py:data:: BALL_RADIUS
+   :value: 92.75
+
+   
+
+.. py:data:: CAR_MAX_SPEED
+   :value: 2300
+
+   
+
+.. py:class:: GameState(state_floats = None)
+
+   Bases: :py:obj:`object`
+
+   .. py:attribute:: BOOST_PADS_LENGTH
+      :value: 34
+
+      
+
+   .. py:attribute:: BALL_STATE_LENGTH
+      :value: 18
+
+      
+
+   .. py:attribute:: PLAYER_CAR_STATE_LENGTH
+      :value: 13
+
+      
+
+   .. py:attribute:: PLAYER_TERTIARY_INFO_LENGTH
+      :value: 11
+
+      
+
+   .. py:attribute:: PLAYER_INFO_LENGTH
+
+      
+
+   .. py:method:: decode(state_floats)
+
+      Decode a string containing the current game state from the Bakkesmod plugin.
+      :param state_floats: String containing the game state.
+
+
+   .. py:method:: _decode(state_vals)
+
+
+   .. py:method:: _decode_player(full_player_data)
+
+
+   .. py:method:: __str__()
+
+      Return str(self).
+
+
+
+.. py:class:: PlayerData
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: __str__()
+
+      Return str(self).
+
+
+
+.. py:class:: LiuDistancePlayerToBallReward
+
+   Bases: :py:obj:`rlgym.utils.RewardFunction`
+
+   Helper class that provides a standard way to create an ABC using
+   inheritance.
+
+   .. py:method:: reset(initial_state)
+
+      Function to be called each time the environment is reset. This is meant to enable users to design stateful reward
+      functions that maintain information about the game throughout an episode to determine a reward.
+
+      :param initial_state: The initial state of the reset environment.
+
+
+   .. py:method:: get_reward(player, state, previous_action)
+
+      Function to compute the reward for a player. This function is given a player argument, and it is expected that
+      the reward returned by this function will be for that player.
+
+      :param player: Player to compute the reward for.
+      :param state: The current state of the game.
+      :param previous_action: The action taken at the previous environment step.
+
+      :return: A reward for the player provided.
+
+
+
+.. py:class:: VelocityPlayerToBallReward(use_scalar_projection=False)
+
+   Bases: :py:obj:`rlgym.utils.RewardFunction`
+
+   Helper class that provides a standard way to create an ABC using
+   inheritance.
+
+   .. py:method:: reset(initial_state)
+
+      Function to be called each time the environment is reset. This is meant to enable users to design stateful reward
+      functions that maintain information about the game throughout an episode to determine a reward.
+
+      :param initial_state: The initial state of the reset environment.
+
+
+   .. py:method:: get_reward(player, state, previous_action)
+
+      Function to compute the reward for a player. This function is given a player argument, and it is expected that
+      the reward returned by this function will be for that player.
+
+      :param player: Player to compute the reward for.
+      :param state: The current state of the game.
+      :param previous_action: The action taken at the previous environment step.
+
+      :return: A reward for the player provided.
+
+
+
+.. py:class:: FaceBallReward
+
+   Bases: :py:obj:`rlgym.utils.RewardFunction`
+
+   Helper class that provides a standard way to create an ABC using
+   inheritance.
+
+   .. py:method:: reset(initial_state)
+
+      Function to be called each time the environment is reset. This is meant to enable users to design stateful reward
+      functions that maintain information about the game throughout an episode to determine a reward.
+
+      :param initial_state: The initial state of the reset environment.
+
+
+   .. py:method:: get_reward(player, state, previous_action)
+
+      Function to compute the reward for a player. This function is given a player argument, and it is expected that
+      the reward returned by this function will be for that player.
+
+      :param player: Player to compute the reward for.
+      :param state: The current state of the game.
+      :param previous_action: The action taken at the previous environment step.
+
+      :return: A reward for the player provided.
+
+
+
+.. py:class:: TouchBallReward(aerial_weight=0.0)
+
+   Bases: :py:obj:`rlgym.utils.RewardFunction`
+
+   Helper class that provides a standard way to create an ABC using
+   inheritance.
+
+   .. py:method:: reset(initial_state)
+
+      Function to be called each time the environment is reset. This is meant to enable users to design stateful reward
+      functions that maintain information about the game throughout an episode to determine a reward.
+
+      :param initial_state: The initial state of the reset environment.
+
+
+   .. py:method:: get_reward(player, state, previous_action)
+
+      Function to compute the reward for a player. This function is given a player argument, and it is expected that
+      the reward returned by this function will be for that player.
+
+      :param player: Player to compute the reward for.
+      :param state: The current state of the game.
+      :param previous_action: The action taken at the previous environment step.
+
+      :return: A reward for the player provided.
+
+
+

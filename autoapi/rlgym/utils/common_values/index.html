@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>rlgym.utils.common_values &mdash; RLGym 2.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="rlgym.utils.math" href="../math/index.html" />
+    <link rel="prev" title="rlgym.utils.terminal_conditions.terminal_condition" href="../terminal_conditions/terminal_condition/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> RLGym
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../communication/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.communication</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../envs/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.envs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../gamelaunch/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.gamelaunch</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">RLGym</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils</span></code></a></li>
+      <li class="breadcrumb-item active"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.common_values</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/autoapi/rlgym/utils/common_values/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-rlgym.utils.common_values">
+<span id="rlgym-utils-common-values"></span><h1><a class="reference internal" href="#module-rlgym.utils.common_values" title="rlgym.utils.common_values"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.common_values</span></code></a><a class="headerlink" href="#module-rlgym.utils.common_values" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="rlgym.utils.common_values.SIDE_WALL_X">
+<span class="sig-prename descclassname"><span class="pre">rlgym.utils.common_values.</span></span><span class="sig-name descname"><span class="pre">SIDE_WALL_X</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4096</span></em><a class="headerlink" href="#rlgym.utils.common_values.SIDE_WALL_X" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="rlgym.utils.common_values.BACK_WALL_Y">
+<span class="sig-prename descclassname"><span class="pre">rlgym.utils.common_values.</span></span><span class="sig-name descname"><span class="pre">BACK_WALL_Y</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5120</span></em><a class="headerlink" href="#rlgym.utils.common_values.BACK_WALL_Y" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="rlgym.utils.common_values.CEILING_Z">
+<span class="sig-prename descclassname"><span class="pre">rlgym.utils.common_values.</span></span><span class="sig-name descname"><span class="pre">CEILING_Z</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2044</span></em><a class="headerlink" href="#rlgym.utils.common_values.CEILING_Z" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="rlgym.utils.common_values.BACK_NET_Y">
+<span class="sig-prename descclassname"><span class="pre">rlgym.utils.common_values.</span></span><span class="sig-name descname"><span class="pre">BACK_NET_Y</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6000</span></em><a class="headerlink" href="#rlgym.utils.common_values.BACK_NET_Y" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="rlgym.utils.common_values.GOAL_HEIGHT">
+<span class="sig-prename descclassname"><span class="pre">rlgym.utils.common_values.</span></span><span class="sig-name descname"><span class="pre">GOAL_HEIGHT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">642.775</span></em><a class="headerlink" href="#rlgym.utils.common_values.GOAL_HEIGHT" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="rlgym.utils.common_values.ORANGE_GOAL_CENTER">
+<span class="sig-prename descclassname"><span class="pre">rlgym.utils.common_values.</span></span><span class="sig-name descname"><span class="pre">ORANGE_GOAL_CENTER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(0,)</span></em><a class="headerlink" href="#rlgym.utils.common_values.ORANGE_GOAL_CENTER" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="rlgym.utils.common_values.BLUE_GOAL_CENTER">
+<span class="sig-prename descclassname"><span class="pre">rlgym.utils.common_values.</span></span><span class="sig-name descname"><span class="pre">BLUE_GOAL_CENTER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(0,)</span></em><a class="headerlink" href="#rlgym.utils.common_values.BLUE_GOAL_CENTER" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="rlgym.utils.common_values.ORANGE_GOAL_BACK">
+<span class="sig-prename descclassname"><span class="pre">rlgym.utils.common_values.</span></span><span class="sig-name descname"><span class="pre">ORANGE_GOAL_BACK</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(0,)</span></em><a class="headerlink" href="#rlgym.utils.common_values.ORANGE_GOAL_BACK" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="rlgym.utils.common_values.BLUE_GOAL_BACK">
+<span class="sig-prename descclassname"><span class="pre">rlgym.utils.common_values.</span></span><span class="sig-name descname"><span class="pre">BLUE_GOAL_BACK</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(0,)</span></em><a class="headerlink" href="#rlgym.utils.common_values.BLUE_GOAL_BACK" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="rlgym.utils.common_values.BALL_RADIUS">
+<span class="sig-prename descclassname"><span class="pre">rlgym.utils.common_values.</span></span><span class="sig-name descname"><span class="pre">BALL_RADIUS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">92.75</span></em><a class="headerlink" href="#rlgym.utils.common_values.BALL_RADIUS" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="rlgym.utils.common_values.BALL_MAX_SPEED">
+<span class="sig-prename descclassname"><span class="pre">rlgym.utils.common_values.</span></span><span class="sig-name descname"><span class="pre">BALL_MAX_SPEED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6000</span></em><a class="headerlink" href="#rlgym.utils.common_values.BALL_MAX_SPEED" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="rlgym.utils.common_values.CAR_MAX_SPEED">
+<span class="sig-prename descclassname"><span class="pre">rlgym.utils.common_values.</span></span><span class="sig-name descname"><span class="pre">CAR_MAX_SPEED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2300</span></em><a class="headerlink" href="#rlgym.utils.common_values.CAR_MAX_SPEED" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="rlgym.utils.common_values.SUPERSONIC_THRESHOLD">
+<span class="sig-prename descclassname"><span class="pre">rlgym.utils.common_values.</span></span><span class="sig-name descname"><span class="pre">SUPERSONIC_THRESHOLD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2200</span></em><a class="headerlink" href="#rlgym.utils.common_values.SUPERSONIC_THRESHOLD" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="rlgym.utils.common_values.CAR_MAX_ANG_VEL">
+<span class="sig-prename descclassname"><span class="pre">rlgym.utils.common_values.</span></span><span class="sig-name descname"><span class="pre">CAR_MAX_ANG_VEL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5.5</span></em><a class="headerlink" href="#rlgym.utils.common_values.CAR_MAX_ANG_VEL" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="rlgym.utils.common_values.BLUE_TEAM">
+<span class="sig-prename descclassname"><span class="pre">rlgym.utils.common_values.</span></span><span class="sig-name descname"><span class="pre">BLUE_TEAM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#rlgym.utils.common_values.BLUE_TEAM" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="rlgym.utils.common_values.ORANGE_TEAM">
+<span class="sig-prename descclassname"><span class="pre">rlgym.utils.common_values.</span></span><span class="sig-name descname"><span class="pre">ORANGE_TEAM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#rlgym.utils.common_values.ORANGE_TEAM" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="rlgym.utils.common_values.NUM_ACTIONS">
+<span class="sig-prename descclassname"><span class="pre">rlgym.utils.common_values.</span></span><span class="sig-name descname"><span class="pre">NUM_ACTIONS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></em><a class="headerlink" href="#rlgym.utils.common_values.NUM_ACTIONS" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="rlgym.utils.common_values.BOOST_LOCATIONS">
+<span class="sig-prename descclassname"><span class="pre">rlgym.utils.common_values.</span></span><span class="sig-name descname"><span class="pre">BOOST_LOCATIONS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">((0.0,),</span> <span class="pre">(),</span> <span class="pre">(1792.0,),</span> <span class="pre">(),</span> <span class="pre">(3072.0,),</span> <span class="pre">(),</span> <span class="pre">(940.0,),</span> <span class="pre">(0.0,),</span> <span class="pre">(),</span> <span class="pre">(3584.0,),</span> <span class="pre">(),</span> <span class="pre">(1788.0,),</span> <span class="pre">(),...</span></em><a class="headerlink" href="#rlgym.utils.common_values.BOOST_LOCATIONS" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../terminal_conditions/terminal_condition/index.html" class="btn btn-neutral float-left" title="rlgym.utils.terminal_conditions.terminal_condition" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../math/index.html" class="btn btn-neutral float-right" title="rlgym.utils.math" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Lucas Emery &amp; Matthew Allen.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

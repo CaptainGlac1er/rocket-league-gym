@@ -1,0 +1,41 @@
+:py:mod:`rlgym.utils.state_setters.wrappers.car_wrapper`
+========================================================
+
+.. py:module:: rlgym.utils.state_setters.wrappers.car_wrapper
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   rlgym.utils.state_setters.wrappers.car_wrapper.CarWrapper
+
+
+
+
+.. py:class:: CarWrapper(team_num = -1, id = -1, player_data = None)
+
+   Bases: :py:obj:`rlgym.utils.state_setters.wrappers.PhysicsWrapper`
+
+   .. py:method:: _read_from_player_data(player_data)
+
+      A function to modify CarWrapper values from values in a PlayerData object.
+
+
+   .. py:method:: set_rot(pitch = None, yaw = None, roll = None)
+
+      Sets rotation in terms of euler angles.
+
+
+   .. py:method:: _encode()
+
+      Function called by a StateWrapper to produce a state string.
+
+      :return: String containing value data.
+
+
+

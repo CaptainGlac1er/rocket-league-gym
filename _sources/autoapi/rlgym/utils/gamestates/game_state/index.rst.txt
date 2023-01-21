@@ -1,0 +1,70 @@
+:py:mod:`rlgym.utils.gamestates.game_state`
+===========================================
+
+.. py:module:: rlgym.utils.gamestates.game_state
+
+.. autoapi-nested-parse::
+
+   Object to contain all relevant information about the game state.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   rlgym.utils.gamestates.game_state.GameState
+
+
+
+
+.. py:class:: GameState(state_floats = None)
+
+   Bases: :py:obj:`object`
+
+   .. py:attribute:: BOOST_PADS_LENGTH
+      :value: 34
+
+      
+
+   .. py:attribute:: BALL_STATE_LENGTH
+      :value: 18
+
+      
+
+   .. py:attribute:: PLAYER_CAR_STATE_LENGTH
+      :value: 13
+
+      
+
+   .. py:attribute:: PLAYER_TERTIARY_INFO_LENGTH
+      :value: 11
+
+      
+
+   .. py:attribute:: PLAYER_INFO_LENGTH
+
+      
+
+   .. py:method:: decode(state_floats)
+
+      Decode a string containing the current game state from the Bakkesmod plugin.
+      :param state_floats: String containing the game state.
+
+
+   .. py:method:: _decode(state_vals)
+
+
+   .. py:method:: _decode_player(full_player_data)
+
+
+   .. py:method:: __str__()
+
+      Return str(self).
+
+
+

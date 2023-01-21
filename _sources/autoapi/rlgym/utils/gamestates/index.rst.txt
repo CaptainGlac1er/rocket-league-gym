@@ -1,0 +1,139 @@
+:py:mod:`rlgym.utils.gamestates`
+================================
+
+.. py:module:: rlgym.utils.gamestates
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   game_state/index.rst
+   physics_object/index.rst
+   player_data/index.rst
+
+
+Package Contents
+----------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   rlgym.utils.gamestates.PhysicsObject
+   rlgym.utils.gamestates.PlayerData
+   rlgym.utils.gamestates.GameState
+
+
+
+
+.. py:class:: PhysicsObject(position=None, quaternion=None, linear_velocity=None, angular_velocity=None)
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: decode_car_data(car_data)
+
+      Function to decode the physics state of a car from the game state array.
+      :param car_data: Slice of game state array containing the car data to decode.
+
+
+   .. py:method:: decode_ball_data(ball_data)
+
+      Function to decode the physics state of the ball from the game state array.
+      :param ball_data: Slice of game state array containing the ball data to decode.
+
+
+   .. py:method:: forward()
+
+
+   .. py:method:: right()
+
+
+   .. py:method:: left()
+
+
+   .. py:method:: up()
+
+
+   .. py:method:: pitch()
+
+
+   .. py:method:: yaw()
+
+
+   .. py:method:: roll()
+
+
+   .. py:method:: euler_angles()
+
+
+   .. py:method:: rotation_mtx()
+
+
+   .. py:method:: serialize()
+
+      Function to serialize all the values contained by this physics object into a single 1D list. This can be useful
+      when constructing observations for a policy.
+      :return: List containing the serialized data.
+
+
+
+.. py:class:: PlayerData
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: __str__()
+
+      Return str(self).
+
+
+
+.. py:class:: GameState(state_floats = None)
+
+   Bases: :py:obj:`object`
+
+   .. py:attribute:: BOOST_PADS_LENGTH
+      :value: 34
+
+      
+
+   .. py:attribute:: BALL_STATE_LENGTH
+      :value: 18
+
+      
+
+   .. py:attribute:: PLAYER_CAR_STATE_LENGTH
+      :value: 13
+
+      
+
+   .. py:attribute:: PLAYER_TERTIARY_INFO_LENGTH
+      :value: 11
+
+      
+
+   .. py:attribute:: PLAYER_INFO_LENGTH
+
+      
+
+   .. py:method:: decode(state_floats)
+
+      Decode a string containing the current game state from the Bakkesmod plugin.
+      :param state_floats: String containing the game state.
+
+
+   .. py:method:: _decode(state_vals)
+
+
+   .. py:method:: _decode_player(full_player_data)
+
+
+   .. py:method:: __str__()
+
+      Return str(self).
+
+
+

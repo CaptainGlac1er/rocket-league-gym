@@ -1,0 +1,63 @@
+:py:mod:`rlgym.utils.reward_functions.combined_reward`
+======================================================
+
+.. py:module:: rlgym.utils.reward_functions.combined_reward
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   rlgym.utils.reward_functions.combined_reward.CombinedReward
+
+
+
+
+.. py:class:: CombinedReward(reward_functions, reward_weights = None)
+
+   Bases: :py:obj:`rlgym.utils.reward_functions.RewardFunction`
+
+   A reward composed of multiple rewards.
+
+   .. py:method:: from_zipped(*rewards_and_weights)
+      :classmethod:
+
+      Alternate constructor which takes any number of either rewards, or (reward, weight) tuples.
+
+      :param rewards_and_weights: a sequence of RewardFunction or (RewardFunction, weight) tuples
+
+
+   .. py:method:: reset(initial_state)
+
+      Resets underlying reward functions.
+
+      :param initial_state: The initial state of the reset environment.
+
+
+   .. py:method:: get_reward(player, state, previous_action)
+
+      Returns the reward for a player on the terminal state.
+
+      :param player: Player to compute the reward for.
+      :param state: The current state of the game.
+      :param previous_action: The action taken at the previous environment step.
+
+      :return: The combined rewards for the player on the state.
+
+
+   .. py:method:: get_final_reward(player, state, previous_action)
+
+      Returns the reward for a player on the terminal state.
+
+      :param player: Player to compute the reward for.
+      :param state: The current state of the game.
+      :param previous_action: The action taken at the previous environment step.
+
+      :return: The combined rewards for the player on the state.
+
+
+

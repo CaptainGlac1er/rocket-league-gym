@@ -1,0 +1,129 @@
+:py:mod:`rlgym.utils.state_setters.state_wrapper`
+=================================================
+
+.. py:module:: rlgym.utils.state_setters.state_wrapper
+
+.. autoapi-nested-parse::
+
+   Data classes to permit the manipulation of environment variables.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   rlgym.utils.state_setters.state_wrapper.StateWrapper
+   rlgym.utils.state_setters.state_wrapper.PhysicsWrapper
+   rlgym.utils.state_setters.state_wrapper.CarWrapper
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   rlgym.utils.state_setters.state_wrapper.BLUE_ID1
+   rlgym.utils.state_setters.state_wrapper.ORANGE_ID1
+
+
+.. py:data:: BLUE_ID1
+   :value: 1
+
+   
+
+.. py:data:: ORANGE_ID1
+   :value: 5
+
+   
+
+.. py:class:: StateWrapper(blue_count = 0, orange_count = 0, game_state=None)
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: _read_from_gamestate(game_state)
+
+      A function to modify the StateWrapper with values read in from a GameState object.
+
+
+   .. py:method:: format_state()
+
+      A function to format the values stored within a StateWrapper object. 
+      These values are sent as a string to be applied to the game engine upon an environment reset.
+
+      :return: String containing all state values.
+
+
+
+.. py:class:: PhysicsWrapper(phys_obj = None)
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: _read_from_physics_object(phys_obj)
+
+      A function to modify PhysicsWrapper values from values in a PhysicsObject object.
+
+
+   .. py:method:: set_pos(x = None, y = None, z = None)
+
+      Sets position.
+
+      :param x: Float indicating x position value.
+      :param y: Float indicating y position value.
+      :param z: Float indicating z position value.
+
+
+   .. py:method:: set_lin_vel(x = None, y = None, z = None)
+
+      Sets linear velocity.
+
+      :param x: Float indicating x velocity value.
+      :param y: Float indicating y velocity value.
+      :param z: Float indicating z velocity value.
+
+
+   .. py:method:: set_ang_vel(x = None, y = None, z = None)
+
+      Sets angular velocity.
+
+      :param x: Float indicating x angular velocity value.
+      :param y: Float indicating y angular velocity value.
+      :param z: Float indicating z angular velocity value.
+
+
+   .. py:method:: _encode()
+
+      Function called by a StateWrapper to produce a state string.
+
+      :return: String containing value data.
+
+
+
+.. py:class:: CarWrapper(team_num = -1, id = -1, player_data = None)
+
+   Bases: :py:obj:`PhysicsWrapper`
+
+   .. py:method:: _read_from_player_data(player_data)
+
+      A function to modify CarWrapper values from values in a PlayerData object.
+
+
+   .. py:method:: set_rot(pitch = None, yaw = None, roll = None)
+
+      Sets rotation in terms of euler angles.
+
+
+   .. py:method:: _encode()
+
+      Function called by a StateWrapper to produce a state string.
+
+      :return: String containing value data.
+
+
+

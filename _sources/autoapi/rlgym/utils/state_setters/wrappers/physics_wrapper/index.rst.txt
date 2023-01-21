@@ -1,0 +1,63 @@
+:py:mod:`rlgym.utils.state_setters.wrappers.physics_wrapper`
+============================================================
+
+.. py:module:: rlgym.utils.state_setters.wrappers.physics_wrapper
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   rlgym.utils.state_setters.wrappers.physics_wrapper.PhysicsWrapper
+
+
+
+
+.. py:class:: PhysicsWrapper(phys_obj = None)
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: _read_from_physics_object(phys_obj)
+
+      A function to modify PhysicsWrapper values from values in a PhysicsObject object.
+
+
+   .. py:method:: set_pos(x = None, y = None, z = None)
+
+      Sets position.
+
+      :param x: Float indicating x position value.
+      :param y: Float indicating y position value.
+      :param z: Float indicating z position value.
+
+
+   .. py:method:: set_lin_vel(x = None, y = None, z = None)
+
+      Sets linear velocity.
+
+      :param x: Float indicating x velocity value.
+      :param y: Float indicating y velocity value.
+      :param z: Float indicating z velocity value.
+
+
+   .. py:method:: set_ang_vel(x = None, y = None, z = None)
+
+      Sets angular velocity.
+
+      :param x: Float indicating x angular velocity value.
+      :param y: Float indicating y angular velocity value.
+      :param z: Float indicating z angular velocity value.
+
+
+   .. py:method:: _encode()
+
+      Function called by a StateWrapper to produce a state string.
+
+      :return: String containing value data.
+
+
+

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>rlgym.utils.action_parsers.default_act &mdash; RLGym 2.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="rlgym.utils.action_parsers.discrete_act" href="../discrete_act/index.html" />
+    <link rel="prev" title="rlgym.utils.action_parsers.continuous_act" href="../continuous_act/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../index.html" class="icon icon-home"> RLGym
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../communication/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.communication</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../envs/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.envs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../gamelaunch/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.gamelaunch</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">RLGym</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.action_parsers</span></code></a></li>
+      <li class="breadcrumb-item active"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.action_parsers.default_act</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../_sources/autoapi/rlgym/utils/action_parsers/default_act/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-rlgym.utils.action_parsers.default_act">
+<span id="rlgym-utils-action-parsers-default-act"></span><h1><a class="reference internal" href="#module-rlgym.utils.action_parsers.default_act" title="rlgym.utils.action_parsers.default_act"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.action_parsers.default_act</span></code></a><a class="headerlink" href="#module-rlgym.utils.action_parsers.default_act" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#rlgym.utils.action_parsers.default_act.DefaultAction" title="rlgym.utils.action_parsers.default_act.DefaultAction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DefaultAction</span></code></a></p></td>
+<td><p>Continuous Action space, that also accepts a few other input formats for QoL reasons and to remain</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="rlgym.utils.action_parsers.default_act.DefaultAction">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rlgym.utils.action_parsers.default_act.</span></span><span class="sig-name descname"><span class="pre">DefaultAction</span></span><a class="headerlink" href="#rlgym.utils.action_parsers.default_act.DefaultAction" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../index.html#rlgym.utils.action_parsers.ContinuousAction" title="rlgym.utils.action_parsers.ContinuousAction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rlgym.utils.action_parsers.ContinuousAction</span></code></a></p>
+<p>Continuous Action space, that also accepts a few other input formats for QoL reasons and to remain
+compatible with older versions.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="rlgym.utils.action_parsers.default_act.DefaultAction.get_action_space">
+<span class="sig-name descname"><span class="pre">get_action_space</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.action_parsers.default_act.DefaultAction.get_action_space" title="Permalink to this definition"></a></dt>
+<dd><p>Function that returns the action space type. It will be called during the initialization of the environment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The type of the action space</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>gym.spaces.Space</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rlgym.utils.action_parsers.default_act.DefaultAction.parse_actions">
+<span class="sig-name descname"><span class="pre">parse_actions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">actions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.action_parsers.default_act.DefaultAction.parse_actions" title="Permalink to this definition"></a></dt>
+<dd><p>Function that parses actions from the action space into a format that rlgym understands.
+The expected return value is a numpy float array of size (n, 8) where n is the number of agents.
+The second dimension is indexed as follows: throttle, steer, yaw, pitch, roll, jump, boost, handbrake.
+The first five values are expected to be in the range [-1, 1], while the last three values should be either 0 or 1.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>actions</strong> (<em>Union</em><em>[</em><em>numpy.ndarray</em><em>, </em><em>List</em><em>[</em><em>numpy.ndarray</em><em>]</em><em>, </em><em>List</em><em>[</em><em>float</em><em>]</em><em>]</em>) – An object of actions, as passed to the <cite>env.step</cite> function.</p></li>
+<li><p><strong>state</strong> (<a class="reference internal" href="../../gamestates/index.html#rlgym.utils.gamestates.GameState" title="rlgym.utils.gamestates.GameState"><em>rlgym.utils.gamestates.GameState</em></a>) – The GameState object of the current state that were used to generate the actions.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the parsed actions in the rlgym format.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../continuous_act/index.html" class="btn btn-neutral float-left" title="rlgym.utils.action_parsers.continuous_act" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../discrete_act/index.html" class="btn btn-neutral float-right" title="rlgym.utils.action_parsers.discrete_act" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Lucas Emery &amp; Matthew Allen.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

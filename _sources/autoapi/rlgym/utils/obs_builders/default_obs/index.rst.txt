@@ -1,0 +1,55 @@
+:py:mod:`rlgym.utils.obs_builders.default_obs`
+==============================================
+
+.. py:module:: rlgym.utils.obs_builders.default_obs
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   rlgym.utils.obs_builders.default_obs.DefaultObs
+
+
+
+
+.. py:class:: DefaultObs(pos_coef=1 / 2300, ang_coef=1 / math.pi, lin_vel_coef=1 / 2300, ang_vel_coef=1 / math.pi)
+
+   Bases: :py:obj:`rlgym.utils.obs_builders.ObsBuilder`
+
+   Helper class that provides a standard way to create an ABC using
+   inheritance.
+
+   .. py:method:: reset(initial_state)
+
+      Function to be called each time the environment is reset. Note that this does not need to return anything,
+      the environment will call `build_obs` automatically after reset, so the initial observation for a policy will be
+      constructed in the same way as every other observation.
+
+      :param initial_state: The initial game state of the reset environment.
+
+
+   .. py:method:: build_obs(player, state, previous_action)
+
+      Function to build observations for a policy. This is where all observations will be constructed every step and
+      every reset. This function is given a player argument, and it is expected that the observation returned by this
+      function will contain information from the perspective of that player. This function is called once for each
+      agent automatically at every step.
+
+      :param player: The player to build an observation for. The observation returned should be from the perspective of
+      this player.
+
+      :param state: The current state of the game.
+      :param previous_action: The action taken at the previous environment step.
+
+      :return: An observation for the player provided.
+
+
+   .. py:method:: _add_player_to_obs(obs, player, inverted)
+
+
+

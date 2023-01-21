@@ -1,0 +1,97 @@
+:py:mod:`rlgym.utils.state_setters.random_state`
+================================================
+
+.. py:module:: rlgym.utils.state_setters.random_state
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   rlgym.utils.state_setters.random_state.RandomState
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   rlgym.utils.state_setters.random_state.X_MAX
+   rlgym.utils.state_setters.random_state.Y_MAX
+   rlgym.utils.state_setters.random_state.Z_MAX_BALL
+   rlgym.utils.state_setters.random_state.Z_MAX_CAR
+   rlgym.utils.state_setters.random_state.PITCH_MAX
+   rlgym.utils.state_setters.random_state.YAW_MAX
+   rlgym.utils.state_setters.random_state.ROLL_MAX
+
+
+.. py:data:: X_MAX
+   :value: 7000
+
+   
+
+.. py:data:: Y_MAX
+   :value: 9000
+
+   
+
+.. py:data:: Z_MAX_BALL
+   :value: 1850
+
+   
+
+.. py:data:: Z_MAX_CAR
+   :value: 1900
+
+   
+
+.. py:data:: PITCH_MAX
+
+   
+
+.. py:data:: YAW_MAX
+
+   
+
+.. py:data:: ROLL_MAX
+
+   
+
+.. py:class:: RandomState(ball_rand_speed = False, cars_rand_speed = False, cars_on_ground = True)
+
+   Bases: :py:obj:`rlgym.utils.state_setters.StateSetter`
+
+   Helper class that provides a standard way to create an ABC using
+   inheritance.
+
+   .. py:method:: reset(state_wrapper)
+
+      Modifies the StateWrapper to contain random values the ball and each car.
+
+      :param state_wrapper: StateWrapper object to be modified with desired state values.
+
+
+   .. py:method:: _reset_ball_random(state_wrapper, random_speed)
+
+      Function to set the ball to a random position.
+
+      :param state_wrapper: StateWrapper object to be modified.
+      :param random_speed: Boolean indicating whether to randomize velocity values.
+
+
+   .. py:method:: _reset_cars_random(state_wrapper, on_ground, random_speed)
+
+      Function to set all cars to a random position.
+
+      :param state_wrapper: StateWrapper object to be modified.
+      :param on_ground: Boolean indicating whether to place cars only on the ground.
+      :param random_speed: Boolean indicating whether to randomize velocity values.
+
+
+

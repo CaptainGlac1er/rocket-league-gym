@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>rlgym.utils &mdash; RLGym 2.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="rlgym.utils.action_parsers" href="action_parsers/index.html" />
+    <link rel="prev" title="rlgym.gamelaunch.paging" href="../gamelaunch/paging/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> RLGym
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../communication/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.communication</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../envs/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.envs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gamelaunch/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.gamelaunch</span></code></a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">RLGym</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym</span></code></a></li>
+      <li class="breadcrumb-item active"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/autoapi/rlgym/utils/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-rlgym.utils">
+<span id="rlgym-utils"></span><h1><a class="reference internal" href="#module-rlgym.utils" title="rlgym.utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils</span></code></a><a class="headerlink" href="#module-rlgym.utils" title="Permalink to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="action_parsers/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.action_parsers</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="action_parsers/action_parser/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.action_parsers.action_parser</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="action_parsers/continuous_act/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.action_parsers.continuous_act</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="action_parsers/default_act/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.action_parsers.default_act</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="action_parsers/discrete_act/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.action_parsers.discrete_act</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gamestates/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.gamestates</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gamestates/game_state/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.gamestates.game_state</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="gamestates/physics_object/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.gamestates.physics_object</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="gamestates/player_data/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.gamestates.player_data</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="obs_builders/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.obs_builders</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="obs_builders/advanced_obs/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.obs_builders.advanced_obs</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="obs_builders/default_obs/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.obs_builders.default_obs</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="obs_builders/obs_builder/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.obs_builders.obs_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="obs_builders/rhobot_obs/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.obs_builders.rhobot_obs</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="reward_functions/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.reward_functions</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="reward_functions/common_rewards/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.reward_functions.common_rewards</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="reward_functions/common_rewards/ball_goal_rewards/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.reward_functions.common_rewards.ball_goal_rewards</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="reward_functions/common_rewards/conditional_rewards/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.reward_functions.common_rewards.conditional_rewards</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="reward_functions/common_rewards/misc_rewards/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.reward_functions.common_rewards.misc_rewards</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="reward_functions/common_rewards/player_ball_rewards/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.reward_functions.common_rewards.player_ball_rewards</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="reward_functions/combined_reward/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.reward_functions.combined_reward</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="reward_functions/default_reward/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.reward_functions.default_reward</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="reward_functions/reward_function/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.reward_functions.reward_function</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="state_setters/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.state_setters</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="state_setters/wrappers/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.state_setters.wrappers</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="state_setters/wrappers/car_wrapper/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.state_setters.wrappers.car_wrapper</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="state_setters/wrappers/physics_wrapper/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.state_setters.wrappers.physics_wrapper</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="state_setters/wrappers/state_wrapper/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.state_setters.wrappers.state_wrapper</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="state_setters/default_state/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.state_setters.default_state</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="state_setters/random_state/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.state_setters.random_state</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="state_setters/state_setter/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.state_setters.state_setter</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="state_setters/state_wrapper/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.state_setters.state_wrapper</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="terminal_conditions/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.terminal_conditions</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="terminal_conditions/common_conditions/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.terminal_conditions.common_conditions</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="terminal_conditions/terminal_condition/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.terminal_conditions.terminal_condition</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="common_values/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.common_values</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="math/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rlgym.utils.math</span></code></a></li>
+</ul>
+</div>
+</section>
+<section id="package-contents">
+<h2>Package Contents<a class="headerlink" href="#package-contents" title="Permalink to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#rlgym.utils.TerminalCondition" title="rlgym.utils.TerminalCondition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TerminalCondition</span></code></a></p></td>
+<td><p>Helper class that provides a standard way to create an ABC using</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#rlgym.utils.RewardFunction" title="rlgym.utils.RewardFunction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RewardFunction</span></code></a></p></td>
+<td><p>Helper class that provides a standard way to create an ABC using</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#rlgym.utils.ObsBuilder" title="rlgym.utils.ObsBuilder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ObsBuilder</span></code></a></p></td>
+<td><p>Helper class that provides a standard way to create an ABC using</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#rlgym.utils.StateSetter" title="rlgym.utils.StateSetter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StateSetter</span></code></a></p></td>
+<td><p>Helper class that provides a standard way to create an ABC using</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#rlgym.utils.ActionParser" title="rlgym.utils.ActionParser"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ActionParser</span></code></a></p></td>
+<td><p>Helper class that provides a standard way to create an ABC using</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="rlgym.utils.TerminalCondition">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rlgym.utils.</span></span><span class="sig-name descname"><span class="pre">TerminalCondition</span></span><a class="headerlink" href="#rlgym.utils.TerminalCondition" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<p>Helper class that provides a standard way to create an ABC using
+inheritance.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="rlgym.utils.TerminalCondition.reset">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initial_state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.TerminalCondition.reset" title="Permalink to this definition"></a></dt>
+<dd><p>Function to be called each time the environment is reset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>initial_state</strong> (<a class="reference internal" href="gamestates/index.html#rlgym.utils.gamestates.GameState" title="rlgym.utils.gamestates.GameState"><em>rlgym.utils.gamestates.GameState</em></a>) – The initial state of the reset environment.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rlgym.utils.TerminalCondition.is_terminal">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_terminal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">current_state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.TerminalCondition.is_terminal" title="Permalink to this definition"></a></dt>
+<dd><p>Function to determine if a game state is terminal. This will be called once per step, and must return either
+<cite>True</cite> or <cite>False</cite> if the current episode should be terminated at this state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>current_state</strong> (<a class="reference internal" href="gamestates/index.html#rlgym.utils.gamestates.GameState" title="rlgym.utils.gamestates.GameState"><em>rlgym.utils.gamestates.GameState</em></a>) – The current state of the game.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Bool representing whether the current state is a terminal one.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rlgym.utils.RewardFunction">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rlgym.utils.</span></span><span class="sig-name descname"><span class="pre">RewardFunction</span></span><a class="headerlink" href="#rlgym.utils.RewardFunction" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<p>Helper class that provides a standard way to create an ABC using
+inheritance.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="rlgym.utils.RewardFunction.reset">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initial_state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.RewardFunction.reset" title="Permalink to this definition"></a></dt>
+<dd><p>Function to be called each time the environment is reset. This is meant to enable users to design stateful reward
+functions that maintain information about the game throughout an episode to determine a reward.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>initial_state</strong> (<a class="reference internal" href="gamestates/index.html#rlgym.utils.gamestates.GameState" title="rlgym.utils.gamestates.GameState"><em>rlgym.utils.gamestates.GameState</em></a>) – The initial state of the reset environment.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rlgym.utils.RewardFunction.pre_step">
+<span class="sig-name descname"><span class="pre">pre_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.RewardFunction.pre_step" title="Permalink to this definition"></a></dt>
+<dd><p>Function to pre-compute values each step. This function is called only once each step, before get_reward is
+called for each player.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>state</strong> (<a class="reference internal" href="gamestates/index.html#rlgym.utils.gamestates.GameState" title="rlgym.utils.gamestates.GameState"><em>rlgym.utils.gamestates.GameState</em></a>) – The current state of the game.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rlgym.utils.RewardFunction.get_reward">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_reward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">player</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">previous_action</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.RewardFunction.get_reward" title="Permalink to this definition"></a></dt>
+<dd><p>Function to compute the reward for a player. This function is given a player argument, and it is expected that
+the reward returned by this function will be for that player.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>player</strong> (<a class="reference internal" href="gamestates/index.html#rlgym.utils.gamestates.PlayerData" title="rlgym.utils.gamestates.PlayerData"><em>rlgym.utils.gamestates.PlayerData</em></a>) – Player to compute the reward for.</p></li>
+<li><p><strong>state</strong> (<a class="reference internal" href="gamestates/index.html#rlgym.utils.gamestates.GameState" title="rlgym.utils.gamestates.GameState"><em>rlgym.utils.gamestates.GameState</em></a>) – The current state of the game.</p></li>
+<li><p><strong>previous_action</strong> (<em>numpy.ndarray</em>) – The action taken at the previous environment step.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A reward for the player provided.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rlgym.utils.RewardFunction.get_final_reward">
+<span class="sig-name descname"><span class="pre">get_final_reward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">player</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">previous_action</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.RewardFunction.get_final_reward" title="Permalink to this definition"></a></dt>
+<dd><p>Function to compute the reward for a player at the final step of an episode. This will be called only once, when
+it is determined that the current state is a terminal one. This may be useful for sparse reward signals that only
+produce a value at the final step of an environment. By default, the regular get_reward is used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>player</strong> (<a class="reference internal" href="gamestates/index.html#rlgym.utils.gamestates.PlayerData" title="rlgym.utils.gamestates.PlayerData"><em>rlgym.utils.gamestates.PlayerData</em></a>) – Player to compute the reward for.</p></li>
+<li><p><strong>state</strong> (<a class="reference internal" href="gamestates/index.html#rlgym.utils.gamestates.GameState" title="rlgym.utils.gamestates.GameState"><em>rlgym.utils.gamestates.GameState</em></a>) – The current state of the game.</p></li>
+<li><p><strong>previous_action</strong> (<em>numpy.ndarray</em>) – The action taken at the previous environment step.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A reward for the player provided.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rlgym.utils.ObsBuilder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rlgym.utils.</span></span><span class="sig-name descname"><span class="pre">ObsBuilder</span></span><a class="headerlink" href="#rlgym.utils.ObsBuilder" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<p>Helper class that provides a standard way to create an ABC using
+inheritance.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="rlgym.utils.ObsBuilder.get_obs_space">
+<span class="sig-name descname"><span class="pre">get_obs_space</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.ObsBuilder.get_obs_space" title="Permalink to this definition"></a></dt>
+<dd><p>Function that returns the observation space type. It will be called during the initialization of the environment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The type of the observation space</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>gym.spaces.Space</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rlgym.utils.ObsBuilder.reset">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initial_state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.ObsBuilder.reset" title="Permalink to this definition"></a></dt>
+<dd><p>Function to be called each time the environment is reset. Note that this does not need to return anything,
+the environment will call <cite>build_obs</cite> automatically after reset, so the initial observation for a policy will be
+constructed in the same way as every other observation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>initial_state</strong> (<a class="reference internal" href="gamestates/index.html#rlgym.utils.gamestates.GameState" title="rlgym.utils.gamestates.GameState"><em>rlgym.utils.gamestates.GameState</em></a>) – The initial game state of the reset environment.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rlgym.utils.ObsBuilder.pre_step">
+<span class="sig-name descname"><span class="pre">pre_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.ObsBuilder.pre_step" title="Permalink to this definition"></a></dt>
+<dd><p>Function to pre-compute values each step. This function is called only once each step, before build_obs is
+called for each player.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>state</strong> (<a class="reference internal" href="gamestates/index.html#rlgym.utils.gamestates.GameState" title="rlgym.utils.gamestates.GameState"><em>rlgym.utils.gamestates.GameState</em></a>) – The current state of the game.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rlgym.utils.ObsBuilder.build_obs">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_obs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">player</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">previous_action</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.ObsBuilder.build_obs" title="Permalink to this definition"></a></dt>
+<dd><p>Function to build observations for a policy. This is where all observations will be constructed every step and
+every reset. This function is given a player argument, and it is expected that the observation returned by this
+function will contain information from the perspective of that player. This function is called once for each
+agent automatically at every step.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>player</strong> (<a class="reference internal" href="gamestates/index.html#rlgym.utils.gamestates.PlayerData" title="rlgym.utils.gamestates.PlayerData"><em>rlgym.utils.gamestates.PlayerData</em></a>) – The player to build an observation for. The observation returned should be from the perspective of</p></li>
+<li><p><strong>state</strong> (<a class="reference internal" href="gamestates/index.html#rlgym.utils.gamestates.GameState" title="rlgym.utils.gamestates.GameState"><em>rlgym.utils.gamestates.GameState</em></a>) – </p></li>
+<li><p><strong>previous_action</strong> (<em>numpy.ndarray</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Any</p>
+</dd>
+</dl>
+<p>this player.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state</strong> (<a class="reference internal" href="gamestates/index.html#rlgym.utils.gamestates.GameState" title="rlgym.utils.gamestates.GameState"><em>rlgym.utils.gamestates.GameState</em></a>) – The current state of the game.</p></li>
+<li><p><strong>previous_action</strong> (<em>numpy.ndarray</em>) – The action taken at the previous environment step.</p></li>
+<li><p><strong>player</strong> (<a class="reference internal" href="gamestates/index.html#rlgym.utils.gamestates.PlayerData" title="rlgym.utils.gamestates.PlayerData"><em>rlgym.utils.gamestates.PlayerData</em></a>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An observation for the player provided.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Any</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rlgym.utils.StateSetter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rlgym.utils.</span></span><span class="sig-name descname"><span class="pre">StateSetter</span></span><a class="headerlink" href="#rlgym.utils.StateSetter" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<p>Helper class that provides a standard way to create an ABC using
+inheritance.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="rlgym.utils.StateSetter.build_wrapper">
+<span class="sig-name descname"><span class="pre">build_wrapper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_team_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spawn_opponents</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.StateSetter.build_wrapper" title="Permalink to this definition"></a></dt>
+<dd><p>Function to be called each time the environment is reset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>max_team_size</strong> (<em>int</em>) – The maximum supported team size in the current rlgym instance.</p></li>
+<li><p><strong>spawn_opponents</strong> (<em>bool</em>) – If the user expects agents in the orange side or not, only provided for backwards compatibility.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The StateWrapper object that will be received in StateSetter.reset(), any team shapes are supported as</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="state_setters/wrappers/state_wrapper/index.html#rlgym.utils.state_setters.wrappers.state_wrapper.StateWrapper" title="rlgym.utils.state_setters.wrappers.state_wrapper.StateWrapper">rlgym.utils.state_setters.wrappers.state_wrapper.StateWrapper</a></p>
+</dd>
+</dl>
+<p>long as team size is smaller or equal to max_team_size</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rlgym.utils.StateSetter.reset">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_wrapper</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.StateSetter.reset" title="Permalink to this definition"></a></dt>
+<dd><p>Function to be called each time the environment is reset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>state_wrapper</strong> (<a class="reference internal" href="state_setters/wrappers/state_wrapper/index.html#rlgym.utils.state_setters.wrappers.state_wrapper.StateWrapper" title="rlgym.utils.state_setters.wrappers.state_wrapper.StateWrapper"><em>rlgym.utils.state_setters.wrappers.state_wrapper.StateWrapper</em></a>) – StateWrapper object to be modified with desired state values.</p>
+</dd>
+</dl>
+<p>NOTE: This function should change any desired values of the StateWrapper, which are all defaulted to 0.
+The values within StateWrapper are sent to the game each time the match is reset.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rlgym.utils.ActionParser">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rlgym.utils.</span></span><span class="sig-name descname"><span class="pre">ActionParser</span></span><a class="headerlink" href="#rlgym.utils.ActionParser" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<p>Helper class that provides a standard way to create an ABC using
+inheritance.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="rlgym.utils.ActionParser.get_action_space">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_action_space</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.ActionParser.get_action_space" title="Permalink to this definition"></a></dt>
+<dd><p>Function that returns the action space type. It will be called during the initialization of the environment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The type of the action space</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>gym.spaces.Space</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rlgym.utils.ActionParser.parse_actions">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parse_actions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">actions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rlgym.utils.ActionParser.parse_actions" title="Permalink to this definition"></a></dt>
+<dd><p>Function that parses actions from the action space into a format that rlgym understands.
+The expected return value is a numpy float array of size (n, 8) where n is the number of agents.
+The second dimension is indexed as follows: throttle, steer, yaw, pitch, roll, jump, boost, handbrake.
+The first five values are expected to be in the range [-1, 1], while the last three values should be either 0 or 1.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>actions</strong> (<em>Any</em>) – An object of actions, as passed to the <cite>env.step</cite> function.</p></li>
+<li><p><strong>state</strong> (<a class="reference internal" href="gamestates/index.html#rlgym.utils.gamestates.GameState" title="rlgym.utils.gamestates.GameState"><em>rlgym.utils.gamestates.GameState</em></a>) – The GameState object of the current state that were used to generate the actions.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the parsed actions in the rlgym format.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../gamelaunch/paging/index.html" class="btn btn-neutral float-left" title="rlgym.gamelaunch.paging" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="action_parsers/index.html" class="btn btn-neutral float-right" title="rlgym.utils.action_parsers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Lucas Emery &amp; Matthew Allen.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
